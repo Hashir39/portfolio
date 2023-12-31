@@ -161,8 +161,11 @@ nav ul li a:hover{
 
 
 .contact-section {
-  background-color: #111010 !important;
+  background-color: rgb(0, 0, 34);
   margin-top: 70px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  height: 5vh;
   padding: 13px;
   text-align: center;
 }
@@ -314,7 +317,6 @@ nav ul li a:hover{
     margin-bottom: 50px;
   }
   .contact-section {
-    background-color: #111010 !important;
     padding: 23px;
     text-align: center;
     
@@ -329,7 +331,8 @@ nav ul li a:hover{
     height: unset;
   }
   .contact-section{
-    height: 61vh;
+    
+    height: auto;
   }
   .firstsection{
     flex-direction: column-reverse;
@@ -365,30 +368,4 @@ nav ul li a:hover{
   .image-top{
     top: 133px;
   }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #333;
-    text-align: center;
-    z-index: 1; /* Ensure it appears above other content */
 }
-
-.nav-links.show {
-    display: flex;
-}
-
-.nav-links li {
-    margin: 0;
-    padding: 10px;
-}
-
-.toggle-btn {
-    display: block;
-}
-}
-
-
