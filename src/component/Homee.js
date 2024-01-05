@@ -40,13 +40,19 @@ const Home = () => {
     anchor.download = 'Hashir_Resume.pdf';
     anchor.click();
   };
+  const toggleMenu = () => {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+  };
+  
   return (
     <>
       <header>
         <nav>
           <div className="left">Hashir's Portfolio</div>
           <div className="right">
-            <ul>
+            <div className="menu-icon" onClick={toggleMenu}>&#9776;</div>
+            <ul className='nav-links'>
               <li>
                 <ScrollLink to="home"
                   smooth="true"
@@ -83,7 +89,7 @@ const Home = () => {
             <div>and I'm a</div>
             <div>
       <TypedComponent />
-    </div>
+       </div>
             <span id="element"></span>
             <div className="buttons">
               <button className="btn" onClick={handleDownloadResume} >Download Resume</button>
@@ -171,13 +177,14 @@ const Home = () => {
             <div className="contact-form">
               <form action="https://formspree.io/f/mjvnvyvj" method="POST">
                 <label htmlFor="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" />
+                <input type="text" id="name" name="name" placeholder="Your Name" autoComplete="name" />
                 <label htmlFor="email">Your Email</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   placeholder="Your Email"
+                  autoComplete="Your Email"
                 />
                 <label htmlFor="message">Message</label>
                 <textarea
