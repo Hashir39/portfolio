@@ -7,7 +7,6 @@ import { Link as ScrollLink } from 'react-scroll';
 import Typed from 'typed.js';
 import { Element } from 'react-scroll';
 import Project from './Project'
-import Contact from './Contact'
 
 
 
