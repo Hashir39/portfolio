@@ -256,11 +256,19 @@ nav ul li a:hover {
 }
 
 .project-section h1 {
+<<<<<<< HEAD
   cursor: pointer;
   color: rgba(255, 255, 255, 0.726);
   font-size: 1.2em;
   margin-top: -20px;
   font-family: "Poppins", sans-serif;
+=======
+  color: rgba(255, 255, 255, 0.726); /* White text for contrast */
+  font-size: 1.8em; /* Font size */
+  display: block;
+  margin-bottom: 33px;
+  font-family: 'Poppins', sans-serif;
+>>>>>>> 8ae6bfbd53bd7397c930696233a07857085cc55c
 }
 
 .project-section h1:hover {
@@ -338,6 +346,7 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 .github-button:hover {
   background-color: #555; 
 } */
@@ -428,6 +437,18 @@ nav ul li a:hover {
 @media screen and (max-width: 768px) {
   body {
     min-width: fit-content;
+=======
+.menu-icon{
+  display: none;
+}
+
+
+
+@media screen and  (max-width:768px){
+  body{
+     min-width: fit-content;
+     
+>>>>>>> 8ae6bfbd53bd7397c930696233a07857085cc55c
   }
   .project-section {
     padding: 13px;
@@ -436,6 +457,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
   }
+<<<<<<< HEAD
   .project-section h1 {
     position: relative;
     top: -130px;
@@ -449,6 +471,21 @@ nav ul li a:hover {
     top: -72px;
   }
   .project-section .descc {
+=======
+  .project-section h1{
+    position: relative;
+    top: -130px;
+  }
+  .project-section img{
+    position: relative;
+    top:-70px
+  }
+  .project-section .title{
+    position: relative;
+    top: -72px;
+  }
+  .project-section .descc{
+>>>>>>> 8ae6bfbd53bd7397c930696233a07857085cc55c
     position: relative;
     top: -68px;
     margin-bottom: 160px;
@@ -480,9 +517,15 @@ nav ul li a:hover {
   .secondsection .vertical {
     height: unset;
     position: relative;
+<<<<<<< HEAD
     top: -200px;
   }
   .contact-section {
+=======
+    top:-200px
+  }
+  .contact-section{
+>>>>>>> 8ae6bfbd53bd7397c930696233a07857085cc55c
     margin-top: -136px;
     height: auto;
   }
@@ -492,10 +535,17 @@ nav ul li a:hover {
   .vertical-title {
     left: 45px;
   }
+<<<<<<< HEAD
   .vertical-desc {
     display: none;
   }
   .secondsection.box {
+=======
+  .vertical-desc{
+    display: none;
+  }
+  .secondsection.box{
+>>>>>>> 8ae6bfbd53bd7397c930696233a07857085cc55c
     width: 50vw;
   }
   .leftsection {
@@ -510,8 +560,13 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
   }
+<<<<<<< HEAD
   .secondsection {
     top: 45px;
+=======
+  .secondsection{
+    top:45px;
+>>>>>>> 8ae6bfbd53bd7397c930696233a07857085cc55c
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -535,14 +590,22 @@ nav ul li a:hover {
   }
   nav {
     width: 100%;
+<<<<<<< HEAD
     background-color: (0, 0, 34);
+=======
+    background-color: (0,0,34);
+>>>>>>> 8ae6bfbd53bd7397c930696233a07857085cc55c
     top: 0;
     z-index: 2; /* Ensure it appears above other content */
   }
   .right {
     margin-top: 10px;
   }
+<<<<<<< HEAD
   .header {
+=======
+  .header{
+>>>>>>> 8ae6bfbd53bd7397c930696233a07857085cc55c
     padding: 1.25rem 4%;
   }
   nav ul {
@@ -571,6 +634,7 @@ nav ul li a:hover {
     margin: 1.5rem 0;
     margin-left: 15px;
   }
+<<<<<<< HEAD
 
   .menu-icon {
     display: block;
@@ -591,6 +655,28 @@ nav ul li a:hover {
     margin-bottom: -69px;
   }
   #element {
+=======
+  
+  .menu-icon {
+   display: block;
+   position: absolute;
+   float: right;
+   top: 45px;
+   left: 8px;
+   font-size: 1.4rem;
+   width: 100%;
+  }
+  .rightsection img{
+    top:30px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .leftsection div{
+    margin-top: 74px;
+    margin-bottom: -69px;
+  }
+  #element{
+>>>>>>> 8ae6bfbd53bd7397c930696233a07857085cc55c
     position: relative;
     margin-bottom: 35px;
     margin: 68px;
@@ -599,6 +685,7 @@ nav ul li a:hover {
     position: relative;
     top: -206px;
   }
+<<<<<<< HEAD
   hr {
     position: relative;
     top: -168px;
@@ -618,3 +705,24 @@ nav ul li a:hover {
     margin-bottom: 50px;
   }
 }
+=======
+  hr{
+    position: relative;
+    top:-168px
+  }
+  .left{
+    position: relative;
+    right: -368px;
+    top:22px
+  }
+  .secondsection .textgray{
+    position: relative;
+    top: -200px;
+  }
+  .secondsection h1{
+    position: relative;
+    top:-200px;
+    margin-bottom: 50px;
+  }
+}    
+>>>>>>> 8ae6bfbd53bd7397c930696233a07857085cc55c
