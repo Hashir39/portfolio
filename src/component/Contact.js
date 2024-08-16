@@ -38,8 +38,6 @@ function Contact() {
     )
 }
 
-<<<<<<< HEAD
+
 export default Contact
-=======
-export default Contact
->>>>>>> 8ae6bfbd53bd7397c930696233a07857085cc55c
+

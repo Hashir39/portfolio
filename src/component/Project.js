@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import project1 from './project 1.png';
 import project2 from './project 2.png';
@@ -35,7 +34,7 @@ const ProjectCard = ({ image, title, description, git, technologies }) => {
                     ))}
                 </div >
                 <div className='-mt-4 -mr-6 -mb-6'>
-                <a href={git || "#"} target="_blank" rel="noreferrer" className="text-red-300 border border-gray-200 rounded-lg shadow p-1 sm:p-2 lg:p-3 hover:text-green-500 duration-300 -mt-12">GitHub</a></div>
+                <a href={git || "#"} target="_blank" rel="noreferrer" className="text-red-300 border border-gray-200 rounded-lg shadow p-1 sm:p-2 lg:p-3 hover:text-green-500 duration-300 -mb-5 ">GitHub</a></div>
             </div>
         </div>
     );
@@ -83,39 +82,5 @@ const Project = () => {
 };
 
 export default Project;
-=======
-import React from 'react'
-import project1 from './project 1.png'
-import project2 from './project 2.png'
-import { Element } from 'react-scroll';
-function Project() {
-  return (
-    <div><Element name="project">
-    <section className="project-section">
-      <h1>My Projects</h1>
-      
-      <div className="row">
-        <div className="column">
-          <img src={project1} alt="" className="project-image" />
-          <div className="title">WordCaseWizard</div>
-          <div className="descc">
-          WordCaseWizard is a text manipulation tool that simplifies editing with features like uppercase/lowercase transformations, copying, clearing, and reading time estimation. It also includes a dark mode for a better user experience.
-          </div>
-        </div>
-        <div className="column">
-          <img src={project2} alt="" className="project-image" />
-          <div className="title">DailyPress</div>
-          <div className="descc">
-          DailyPress is a versatile news platform offering daily updates across various categories like science, entertainment, sports, technology, and politics. It features a user-friendly interface for easy navigation and access to diverse, timely news articles.
-          </div>
-        </div>
-      </div>
 
 
-    </section>
-  </Element></div>
-  )
-}
-
-export default Project
->>>>>>> 8ae6bfbd53bd7397c930696233a07857085cc55c

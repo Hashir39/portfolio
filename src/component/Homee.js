@@ -7,10 +7,9 @@ import { Link as ScrollLink } from 'react-scroll';
 import Typed from 'typed.js';
 import { Element } from 'react-scroll';
 import Project from './Project'
-<<<<<<< HEAD
+
 import Contact from './Contact'
-=======
->>>>>>> 8ae6bfbd53bd7397c930696233a07857085cc55c
+
 
 
 
@@ -123,11 +122,8 @@ const Home = () => {
                 </div>
               </div>
               <div className="vertical">
-<<<<<<< HEAD
                 <img className="img1" src='./web-developer.png' alt="" />
-=======
-                <img className="img2" src='./web-developer.png' alt="" />
->>>>>>> 8ae6bfbd53bd7397c930696233a07857085cc55c
+
                 <div className="vertical-title">Full-Stack Developer</div>
                 <div className="vertical-desc">
                 Focuses on using JavaScript across the entire stack, from front-end interactivity with frameworks like React to back-end development with Node.js. Builds comprehensive web applications with a seamless integration of user interface and server-side logic.
@@ -152,41 +148,8 @@ const Home = () => {
         </Element>
       </main>
       <Project/>
-<<<<<<< HEAD
+
       <Contact/>
-=======
-      <Element name="contact">
-            <div className="div" >
-                <section className="contact-section">
-                    <h1>Contact Me</h1>
-                    <div className="contact-form">
-                        <form action="https://formspree.io/f/mjvnvyvj" method="POST">
-                            <label htmlFor="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" autoComplete="name" />
-                            <label htmlFor="email">Your Email</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="Your Email"
-                                autoComplete="Your Email"
-                            />
-                            <label htmlFor="message">Message</label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                placeholder="Your Message"
-                            ></textarea>
-                            <button className="btn" type="submit">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-                </section>
-            </div>
-            
-        </Element>
->>>>>>> 8ae6bfbd53bd7397c930696233a07857085cc55c
 
     </>
   );
