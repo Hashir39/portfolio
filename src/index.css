@@ -461,7 +461,7 @@ nav ul li a:hover {
   }
   .left {
     font-size: 0.9rem;
-    margin-left: 9rem;
+    margin-left: 7rem;
     margin-top: 2.1rem;
   }
 
@@ -480,7 +480,7 @@ nav ul li a:hover {
   .rightsection img {
     padding: 2rem;
     margin-bottom: 6rem;
-    margin-right: 20rem;
+    margin-right: 20rem !important;
   }
   .nav-links {
     display: none;
@@ -531,6 +531,7 @@ nav ul li a:hover {
   }
   .leftsection .buttons {
     margin-bottom: 2rem;
+    margin-right: 1rem;
   }
   .leftsection .btn {
     padding: 8px;
@@ -556,8 +557,8 @@ nav ul li a:hover {
   }
   .my-work {
     margin-right: 181px;
-    padding-right: 22px;
-    padding: 13px;
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
     margin-left: -2rem;
   }
   .my-work h1 {
@@ -592,7 +593,7 @@ nav ul li a:hover {
     padding-left: 0.4rem;
   }
   .github {
-    margin: 17rem;
+    
     padding: 0.5em !important;
   }
   .contact-section {
