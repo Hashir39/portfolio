@@ -1,5 +1,5 @@
 import React from 'react';
-import project1 from './project 1.png';
+import project1 from './project 1.png'; 
 import project2 from './project 2.png';
 import { Element } from 'react-scroll';
 import '../project.css';

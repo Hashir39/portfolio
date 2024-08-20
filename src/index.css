@@ -11,6 +11,7 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 nav {
   width: 100%;
@@ -195,19 +196,16 @@ nav ul li a:hover {
 
 .contact-form input,
 .contact-form textarea {
+  resize: none;
   font-size: medium;
   width: 80%;
-  max-width: 40;
+  max-width: 500;
   margin: 0.5rem;
   padding: 0.5rem 1rem;
   color: white;
   border: none;
   border-radius: 0.5rem;
   background: rgb(40, 40, 40);
-}
-
-.contact-form textarea {
-  resize: vertical;
 }
 
 .contact-form {
@@ -454,23 +452,25 @@ nav ul li a:hover {
   display: none;
 }
 
-
 @media screen and (max-width: 600px) {
-  body {
-    min-width: fit-content;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    html, body , #root {
+    min-width: -moz-fit-content !important;
+    min-width: fit-content !important;
+    overflow-x: hidden !important;
+    width: 80vw;
   }
-
   .left {
-    margin-left: 9.5rem;
-    margin-bottom: -1.5rem;
+    font-size: 0.9rem;
+    margin-left: 9rem;
+    margin-top: 2.1rem;
   }
 
   .menu-icon {
     display: block;
+    position: absolute;
     color: white;
-    margin-left: -38.1rem;
-    margin-top: 1.5rem;
+    left: 5px;
+    top: 27px;
     font-size: 1.2rem;
     cursor: pointer;
     &:hover {
@@ -479,30 +479,28 @@ nav ul li a:hover {
   }
   .rightsection img {
     padding: 2rem;
-    margin-top: -6rem;
-    margin-left: -20rem;
+    margin-bottom: 6rem;
+    margin-right: 20rem;
   }
   .nav-links {
     display: none;
     position: absolute;
-    
     width: 70%;
     top: 100%;
     padding: 0.5rem 4%;
     margin-left: 0;
     align-items: flex-start;
     background-color: #a7a3a3b1;
-    border: 1px solid #ddd; 
-    z-index: 1; 
+    border: 1px solid #ddd;
+    z-index: 1;
   }
   .nav-links.show {
-    flex-direction: column;
-    align-items: flex-start;
+    position: absolute;
+    top: 52px;
+    left: 6px;
     width: 300px;
     z-index: 10;
-    margin-top: -15.5rem;
-    margin-left: -39.1rem;
-    display: block; 
+    display: block;
     background-color: var(--color-1);
     box-shadow: -5px 0 5px rgba(100, 97, 97, 0.25);
     transition: 0.75s ease-out;
@@ -513,7 +511,7 @@ nav ul li a:hover {
     width: 100%;
     padding: 20px 30px;
     justify-content: flex-start;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     margin-left: 0.0001rem;
   }
   .nav-links a {
@@ -522,8 +520,8 @@ nav ul li a:hover {
   }
   .leftsection {
     font-size: 1.5rem;
-    margin-top: -3rem;
-    margin-left: -19rem;
+    margin-bottom: 3rem;
+    margin-right: 19rem;
     padding: 1.2rem;
     width: 100% !important;
     display: flex;
@@ -532,14 +530,14 @@ nav ul li a:hover {
     align-items: center;
   }
   .leftsection .buttons {
-    margin-top: -2rem;
+    margin-bottom: 2rem;
   }
   .leftsection .btn {
     padding: 8px;
     margin-right: 0.2rem;
   }
   .fshr {
-    margin-top: -103px;
+    margin-top: -160px;
   }
   .secondsection .textgray {
     margin-top: -4rem;
@@ -558,24 +556,27 @@ nav ul li a:hover {
   }
   .my-work {
     margin-right: 181px;
-    padding-right: 37px;
+    padding-right: 22px;
     padding: 13px;
     margin-left: -2rem;
   }
   .my-work h1 {
+    font-size: 1.6rem;
     margin-top: 1rem;
     margin-bottom: 4rem;
-    margin-left: -8rem;
+    margin-left: -7rem;
   }
 
   .project-card {
-    padding: 3px;
-    margin-right: -1rem;
+    margin-top: 0.2rem;
+    padding-right: 1px;
+    padding: 2px;
+    margin-right: -0.7rem;
     display: flex;
     flex-direction: column;
     margin-left: -7.6rem;
     height: 40%;
-    width: 100%;
+    width: 74%;
     margin-bottom: -123px;
   }
 
@@ -598,23 +599,34 @@ nav ul li a:hover {
     margin-top: 16rem !important;
     padding-right: 21rem !important;
   }
-  .contact-section h1{
+  .contact-section h1 {
     margin-bottom: 3rem;
     white-space: nowrap; /* Prevents text from breaking into multiple lines */
     display: inline-block;
     font-size: 1.5rem;
   }
-  .footer{
-    padding-left: 0.7rem;
+  .contact-form input,
+  .contact-form textarea {
+    width: 90%;
+  }
+  .footer {
+    width: 100%;
+    font-size: 0.7rem;
+    padding-left: 2.5rem;
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: space-between; /* Distribute space evenly between items */
+    align-items: center; /* Align items vertically in the center */
+  }
+
+  .imgss {
+    margin: 0 2px;
   }
 }
 
-
-
 @media screen and (max-width: 768px) {
   body {
-    min-width: fit-content;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    width: 100vw;
   }
 
   .contact-section {
@@ -679,7 +691,8 @@ nav ul li a:hover {
   }
   .rightsection img {
     width: 45%;
-    margin-bottom: 73px;
+    margin-bottom: 56px;
+    margin-right: 24.2rem;
   }
   .image-top {
     top: 133px;
@@ -711,6 +724,7 @@ nav ul li a:hover {
   .header {
     .header {
       padding: 1.25rem 4%;
+      overflow-x: hidden;
     }
     nav ul {
       display: flex;
@@ -721,16 +735,8 @@ nav ul li a:hover {
       margin-right: 0px;
       background-color: #161515;
       position: fixed;
-      top: 10px; 
+      top: 10px;
       left: 0;
-    }
-
-    .nav-links.show {
-      display: flex; 
-      flex-direction: column;
-      width: 100%;
-      top: 75px;
-      position: fixed;
     }
 
     nav ul li {
@@ -749,74 +755,71 @@ nav ul li a:hover {
       margin-bottom: -69px;
     }
 
-  .menu-icon {
-    display: block;
-    position: absolute;
-    float: right;
-    top: 45px;
-    left: 8px;
-    font-size: 1.4rem;
-    width: 100%;
-  }
-  .rightsection img {
-    top: 30px;
-    position: relative;
-    margin-bottom: 10px;
-  }
-  .leftsection div {
-    margin-top: 74px;
-    margin-bottom: -69px;
-  }
-  #element {
+    .menu-icon {
+      display: block;
+      position: absolute;
+      float: right;
+      top: 45px;
+      left: 8px;
+      font-size: 1.4rem;
+      width: 100%;
+    }
+    .rightsection img {
+      top: 30px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    .leftsection div {
+      margin-top: 74px;
+      margin-bottom: -69px;
+    }
+    #element {
+      .menu-icon {
+        display: block;
+        position: absolute;
+        float: right;
+        top: 45px;
+        left: 8px;
+        font-size: 1.4rem;
+        width: 100%;
+      }
+      .rightsection img {
+        top: 30px;
+        position: relative;
+        margin-bottom: 10px;
+      }
+      .leftsection div {
+        margin-top: 74px;
+        margin-bottom: -69px;
+      }
+      #element {
+        position: relative;
+        margin-bottom: 35px;
+        margin: 68px;
+      }
+      .buttons {
+        position: relative;
+        top: -206px;
+      }
 
-  
-  .menu-icon {
-   display: block;
-   position: absolute;
-   float: right;
-   top: 45px;
-   left: 8px;
-   font-size: 1.4rem;
-   width: 100%;
-  }
-  .rightsection img{
-    top:30px;
-    position: relative;
-    margin-bottom: 10px;
-  }
-  .leftsection div{
-    margin-top: 74px;
-    margin-bottom: -69px;
-  }
-  #element{
-
-    position: relative;
-    margin-bottom: 35px;
-    margin: 68px;
-  }
-  .buttons {
-    position: relative;
-    top: -206px;
-  }
-
-    hr {
-      position: relative;
-      top: -168px;
-    }
-    .left {
-      position: relative;
-      right: -368px;
-      top: 22px;
-    }
-    .secondsection .textgray {
-      position: relative;
-      top: -200px;
-    }
-    .secondsection h1 {
-      position: relative;
-      top: -200px;
-      margin-bottom: 50px;
+      hr {
+        position: relative;
+        top: -168px;
+      }
+      .left {
+        position: relative;
+        right: -368px;
+        top: 22px;
+      }
+      .secondsection .textgray {
+        position: relative;
+        top: -200px;
+      }
+      .secondsection h1 {
+        position: relative;
+        top: -200px;
+        margin-bottom: 50px;
+      }
     }
   }
-}    
 }
