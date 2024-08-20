@@ -521,7 +521,7 @@ nav ul li a:hover {
   .leftsection {
     font-size: 1.5rem;
     margin-bottom: 3rem;
-    margin-right: 19rem;
+    margin-right: 22rem;
     padding: 1.2rem;
     width: 100% !important;
     display: flex;
@@ -536,6 +536,9 @@ nav ul li a:hover {
   .leftsection .btn {
     padding: 8px;
     margin-right: 0.2rem;
+  }
+  .secondsection{
+    margin-right: 16rem;
   }
   .fshr {
     margin-top: -160px;
@@ -557,7 +560,7 @@ nav ul li a:hover {
   }
   .my-work {
     margin-right: 181px;
-    padding-right: 2rem !important;
+    padding-right: 4rem !important;
     padding-left: 2rem !important;
     margin-left: -2rem;
   }
@@ -597,8 +600,8 @@ nav ul li a:hover {
     padding: 0.5em !important;
   }
   .contact-section {
-    margin-top: 16rem !important;
-    padding-right: 21rem !important;
+    margin-top: 20rem !important;
+    padding-right: 24rem !important;
   }
   .contact-section h1 {
     margin-bottom: 3rem;
@@ -613,7 +616,7 @@ nav ul li a:hover {
   .footer {
     width: 100%;
     font-size: 0.7rem;
-    padding-left: 2.5rem;
+    padding-left: 2rem;
     display: flex; /* Use flexbox to align items in a row */
     justify-content: space-between; /* Distribute space evenly between items */
     align-items: center; /* Align items vertically in the center */
