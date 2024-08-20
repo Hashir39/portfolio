@@ -1,4 +1,4 @@
-import React , { useEffect }  from 'react'
+import React , { useEffect , useRef }  from 'react'
 // import { Link } from 'react-router-dom';
 import downloadimage from './download.png';
 import pngegg from './pngegg.png';
@@ -9,6 +9,7 @@ import { Element } from 'react-scroll';
 import Project from './Project'
 
 import Contact from './Contact'
+import Footer from './Footer';
 
 
 
@@ -40,9 +41,11 @@ const Home = () => {
     anchor.download = 'Hashir_Resume.pdf';
     anchor.click();
   };
+  const navLinksRef = useRef(null);
+
   const toggleMenu = () => {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('show');
+    console.log('Toggle menu called!');
+    navLinksRef.current.classList.toggle('show');
   };
   
   return (
@@ -52,7 +55,7 @@ const Home = () => {
           <div className="left">Hashir's Portfolio</div>
           <div className="right">
             <div className="menu-icon" onClick={toggleMenu}>&#9776;</div>
-            <ul className='nav-links'>
+            <ul ref={navLinksRef} className='nav-links'>
               <li>
                 <ScrollLink to="home"
                   smooth="true"
@@ -102,7 +105,7 @@ const Home = () => {
             <img src={downloadimage} alt="" />
           </div>
         </section>
-        <hr />
+        <hr className='fshr' />
 
         <Element name="about">
           <section className="secondsection">
@@ -116,30 +119,30 @@ const Home = () => {
                   src='./frontend.png'
                   alt=""
                 />
-                <div className="vertical-title">Front-End Web Developer</div>
-                <div className="vertical-desc">
+                <div className="vertical-title hover:text-blue-300 cursor-pointer">Front-End Web Developer</div>
+                <div className="vertical-desc hover:text-yellow-50">
                 Specializes in creating and structuring web pages with a focus on HTML, CSS, and JavaScript. Ensures that websites are accessible, responsive, and user-friendly, leveraging modern web standards and best practices.
                 </div>
               </div>
               <div className="vertical">
                 <img className="img1" src='./web-developer.png' alt="" />
 
-                <div className="vertical-title">Full-Stack Developer</div>
-                <div className="vertical-desc">
+                <div className="vertical-title hover:text-blue-300 cursor-pointer">Full-Stack Developer</div>
+                <div className="vertical-desc hover:text-yellow-50">
                 Focuses on using JavaScript across the entire stack, from front-end interactivity with frameworks like React to back-end development with Node.js. Builds comprehensive web applications with a seamless integration of user interface and server-side logic.
                 </div>
               </div>
               <div className="vertical">
                 <img className="img1" src={pngegg} alt="" />
-                <div className="vertical-title">ReactJS Developer</div>
-                <div className="vertical-desc">
+                <div className="vertical-title hover:text-blue-300 cursor-pointer">ReactJS Developer</div>
+                <div className="vertical-desc hover:text-yellow-50">
                 A ReactJS developer builds user interfaces using the React library, creating reusable UI components for single-page applications. They efficiently manage and update the UI as data changes, leveraging components and the virtual DOM to create responsive web applications
                 </div>
               </div>
               <div className="vertical">
                 <img className="img1" src={node} alt="" />
-                <div className="vertical-title">NodeJS Developer</div>
-                <div className="vertical-desc">
+                <div className="vertical-title hover:text-blue-300 cursor-pointer">NodeJS Developer</div>
+                <div className="vertical-desc hover:text-yellow-50" >
                 A Node.js developer builds server-side applications using JavaScript with the Node.js runtime. They handle server logic, data storage, and database interactions to create scalable, high-performance web applications.
                 </div>
               </div>
@@ -150,6 +153,8 @@ const Home = () => {
       <Project/>
 
       <Contact/>
+
+      <Footer/>
 
     </>
   );

@@ -13,6 +13,7 @@ body {
   scroll-behavior: smooth;
 }
 nav {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -49,7 +50,6 @@ nav ul li a:hover {
   margin-right: 1px;
 }
 
-
 .firstsection .btn:hover {
   background-color: rgb(143, 134, 123);
 }
@@ -68,7 +68,7 @@ nav ul li a:hover {
   background: #1e2167;
   color: white;
   border: 2px solid white;
-  border-radius: 6px;
+  border-radius: 7px;
   font-size: 15px;
   cursor: pointer;
   margin-right: 1.9px;
@@ -143,12 +143,12 @@ nav ul li a:hover {
   width: 30%;
   margin: 0 6vw;
   margin-bottom: 30px;
-  text-align: center; 
+  text-align: center;
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: center; 
-  height: 300px; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
 }
 
 .secondsection .vertical .img1 {
@@ -156,7 +156,6 @@ nav ul li a:hover {
   width: 80px; /* Increase the image size as needed */
   margin-bottom: 1px;
 }
-
 
 .secondsection .vertical-title {
   font-size: 1.2rem;
@@ -171,18 +170,20 @@ nav ul li a:hover {
 
 .contact-section {
   background-color: rgb(0, 0, 34);
-  margin-top: 170px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  height: 5vh;
-  padding: 13px;
+  min-height: calc(100vh - 4);
+  width: 100vw;
+  max-width: 60rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-section h1 {
-  font-size: 1.3rem;
-  color: #fff;
-  margin-bottom: 20px;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
 }
 
 .contact-form label {
@@ -194,13 +195,15 @@ nav ul li a:hover {
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
-  padding: 8px;
-  margin: 8px 0 20px 0;
-  border: 1px solid #fff;
-  border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  font-size: medium;
+  width: 80%;
+  max-width: 40;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  background: rgb(40, 40, 40);
 }
 
 .contact-form textarea {
@@ -208,29 +211,50 @@ nav ul li a:hover {
 }
 
 .contact-form {
-  max-width: 400px;
-  margin: auto;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  max-width: 60rem;
 }
 
 .contact-form button {
-  width: 100%;
-  height: 37px;
-  padding: 5px 10px; /* Adjust the padding to control the height and width */
-  background: #403d70;
-  color: #bfbfd4;
-  border: 2px solid #fff;
-  border-radius: 12px;
-  font-size: 0.7rem;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-  margin-top: 10px;
-
-  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.269);
+  border: none;
+  border-radius: 0.5rem;
+  margin: 2rem;
+  padding: 0.75rem 3.5rem;
 }
-
+.contact-section .imgggg {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact-section .imgss {
+  object-fit: cover;
+  height: 3rem;
+  width: 3rem;
+  margin: 0 0.75rem;
+}
 .contact-form button:hover {
   background: #1e2167;
   color: #9c97f1;
+}
+.footer {
+  width: 100vw;
+  height: 4rem;
+  background: rgb(0, 0, 34);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  font-size: small;
+}
+.caption-style {
+  font-style: italic;
+  font-weight: bold;
+  font-size: larger; /* Adjust as needed */
 }
 /* .my-work{
   display: flex;
@@ -248,7 +272,7 @@ nav ul li a:hover {
   font-size: 20px;
   font-weight: 550;
 } */
-  /* .project-section {
+/* .project-section {
   background-color: rgb(0, 0, 34);
   padding: 50px 0;
   color: white;
@@ -351,10 +375,6 @@ nav ul li a:hover {
   background-color: #555; 
 } */
 
-
-
-
-
 /* .projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -435,13 +455,168 @@ nav ul li a:hover {
 }
 
 
-@media screen and  (max-width:768px){
-  body{
-     min-width: fit-content;
-     
-
+@media screen and (max-width: 600px) {
+  body {
+    min-width: fit-content;
+    overflow-x: hidden; /* Prevent horizontal overflow */
   }
-  
+
+  .left {
+    margin-left: 9.5rem;
+    margin-bottom: -1.5rem;
+  }
+
+  .menu-icon {
+    display: block;
+    color: white;
+    margin-left: -38.1rem;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    &:hover {
+      color: rgba(241, 245, 246, 0.808);
+    }
+  }
+  .rightsection img {
+    padding: 2rem;
+    margin-top: -6rem;
+    margin-left: -20rem;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    
+    width: 70%;
+    top: 100%;
+    padding: 0.5rem 4%;
+    margin-left: 0;
+    align-items: flex-start;
+    background-color: #a7a3a3b1;
+    border: 1px solid #ddd; 
+    z-index: 1; 
+  }
+  .nav-links.show {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    z-index: 10;
+    margin-top: -15.5rem;
+    margin-left: -39.1rem;
+    display: block; 
+    background-color: var(--color-1);
+    box-shadow: -5px 0 5px rgba(100, 97, 97, 0.25);
+    transition: 0.75s ease-out;
+  }
+  .nav-links li {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+    margin-bottom: 10px; 
+    margin-left: 0.0001rem;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: #d4c6c6; /* Add a text color to the nav links */
+  }
+  .leftsection {
+    font-size: 1.5rem;
+    margin-top: -3rem;
+    margin-left: -19rem;
+    padding: 1.2rem;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .leftsection .buttons {
+    margin-top: -2rem;
+  }
+  .leftsection .btn {
+    padding: 8px;
+    margin-right: 0.2rem;
+  }
+  .fshr {
+    margin-top: -103px;
+  }
+  .secondsection .textgray {
+    margin-top: -4rem;
+    margin-left: -18rem;
+  }
+  .secondsection h1 {
+    font-size: 1.3rem;
+    color: rgb(109, 109, 128);
+    margin-top: -8px;
+    margin-left: -18rem;
+  }
+  .secondsection .box {
+    margin-left: -19rem;
+    margin-top: 14rem;
+    margin-bottom: -9rem;
+  }
+  .my-work {
+    margin-right: 181px;
+    padding-right: 37px;
+    padding: 13px;
+    margin-left: -2rem;
+  }
+  .my-work h1 {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    margin-left: -8rem;
+  }
+
+  .project-card {
+    padding: 3px;
+    margin-right: -1rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: -7.6rem;
+    height: 40%;
+    width: 100%;
+    margin-bottom: -123px;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 9rem;
+  }
+  .project-title {
+    padding-top: 0.5rem;
+    padding-left: 0.3rem;
+  }
+  .project-desc {
+    padding-left: 0.4rem;
+  }
+  .github {
+    margin: 17rem;
+    padding: 0.5em !important;
+  }
+  .contact-section {
+    margin-top: 16rem !important;
+    padding-right: 21rem !important;
+  }
+  .contact-section h1{
+    margin-bottom: 3rem;
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+  .footer{
+    padding-left: 0.7rem;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  body {
+    min-width: fit-content;
+    overflow-x: hidden;
+  }
+
   .contact-section {
     padding: 23px;
     text-align: center;
@@ -459,11 +634,9 @@ nav ul li a:hover {
     top: -200px;
   }
   .contact-section {
-
-    top:-200px
+    top: -200px;
   }
-  .contact-section{
-
+  .contact-section {
     margin-top: -136px;
     height: auto;
   }
@@ -478,12 +651,10 @@ nav ul li a:hover {
     display: none;
   }
 
-
-  .vertical-desc{
+  .vertical-desc {
     display: none;
   }
-  .secondsection.box{
-
+  .secondsection.box {
     width: 50vw;
   }
   .leftsection {
@@ -499,8 +670,8 @@ nav ul li a:hover {
     justify-content: center;
   }
 
-  .secondsection{
-    top:45px;
+  .secondsection {
+    top: 45px;
 
     display: flex;
     flex-direction: column;
@@ -528,136 +699,103 @@ nav ul li a:hover {
 
     background-color: (0, 0, 34);
 
-    background-color: (0,0,34);
+    background-color: (0, 0, 34);
 
     top: 0;
-    z-index: 2; /* Ensure it appears above other content */
+    z-index: 2;
   }
   .right {
     margin-top: 10px;
   }
 
   .header {
+    .header {
+      padding: 1.25rem 4%;
+    }
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      float: left;
+      width: 100%;
+      margin-right: 0px;
+      background-color: #161515;
+      position: fixed;
+      top: 10px; 
+      left: 0;
+    }
 
-  .header{
+    .nav-links.show {
+      display: flex; 
+      flex-direction: column;
+      width: 100%;
+      top: 75px;
+      position: fixed;
+    }
 
-    padding: 1.25rem 4%;
-  }
-  nav ul {
-    display: flex; /* Hide the list by default */
-    flex-direction: column;
-    align-items: flex-start;
-    float: left;
-    width: 100%;
-    margin-right: 0px;
-    background-color: #161515;
-    position: fixed;
-    top: 10px; /* Adjust the top position as needed */
-    left: 0;
-  }
+    nav ul li {
+      display: block;
+      margin: 1.5rem 0;
+      margin-left: 15px;
+    }
 
-  .nav-links.show {
-    display: flex; /* Show the nav links when the 'show' class is present */
-    flex-direction: column;
-    width: 100%;
-    top: 75px;
-    position: fixed;
-  }
+    .rightsection img {
+      top: 30px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    .leftsection div {
+      margin-top: 74px;
+      margin-bottom: -69px;
+    }
 
-  nav ul li {
-    display: block;
-    margin: 1.5rem 0;
-    margin-left: 15px;
-  }
+    .menu-icon {
+      display: block;
+      position: absolute;
+      float: right;
+      top: 45px;
+      left: 8px;
+      font-size: 1.4rem;
+      width: 100%;
+    }
+    .rightsection img {
+      top: 30px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    .leftsection div {
+      margin-top: 74px;
+      margin-bottom: -69px;
+    }
+    #element {
+      position: relative;
+      margin-bottom: 35px;
+      margin: 68px;
+    }
+    .buttons {
+      position: relative;
+      top: -206px;
+    }
 
-
-  .menu-icon {
-    display: block;
-    position: absolute;
-    float: right;
-    top: 45px;
-    left: 8px;
-    font-size: 1.4rem;
-    width: 100%;
-  }
-  .rightsection img {
-    top: 30px;
-    position: relative;
-    margin-bottom: 10px;
-  }
-  .leftsection div {
-    margin-top: 74px;
-    margin-bottom: -69px;
-  }
-  #element {
-
-  
-  .menu-icon {
-   display: block;
-   position: absolute;
-   float: right;
-   top: 45px;
-   left: 8px;
-   font-size: 1.4rem;
-   width: 100%;
-  }
-  .rightsection img{
-    top:30px;
-    position: relative;
-    margin-bottom: 10px;
-  }
-  .leftsection div{
-    margin-top: 74px;
-    margin-bottom: -69px;
-  }
-  #element{
-
-    position: relative;
-    margin-bottom: 35px;
-    margin: 68px;
-  }
-  .buttons {
-    position: relative;
-    top: -206px;
-  }
-
-  hr {
-    position: relative;
-    top: -168px;
-  }
-  .left {
-    position: relative;
-    right: -368px;
-    top: 22px;
-  }
-  .secondsection .textgray {
-    position: relative;
-    top: -200px;
-  }
-  .secondsection h1 {
-    position: relative;
-    top: -200px;
-    margin-bottom: 50px;
+    hr {
+      position: relative;
+      top: -168px;
+    }
+    .left {
+      position: relative;
+      right: -368px;
+      top: 22px;
+    }
+    .secondsection .textgray {
+      position: relative;
+      top: -200px;
+    }
+    .secondsection h1 {
+      position: relative;
+      top: -200px;
+      margin-bottom: 50px;
+    }
   }
 }
 
-  hr{
-    position: relative;
-    top:-168px
-  }
-  .left{
-    position: relative;
-    right: -368px;
-    top:22px
-  }
-  .secondsection .textgray{
-    position: relative;
-    top: -200px;
-  }
-  .secondsection h1{
-    position: relative;
-    top:-200px;
-    margin-bottom: 50px;
-  }
-}    
-}
+
