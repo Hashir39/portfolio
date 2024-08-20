@@ -749,33 +749,55 @@ nav ul li a:hover {
       margin-bottom: -69px;
     }
 
-    .menu-icon {
-      display: block;
-      position: absolute;
-      float: right;
-      top: 45px;
-      left: 8px;
-      font-size: 1.4rem;
-      width: 100%;
-    }
-    .rightsection img {
-      top: 30px;
-      position: relative;
-      margin-bottom: 10px;
-    }
-    .leftsection div {
-      margin-top: 74px;
-      margin-bottom: -69px;
-    }
-    #element {
-      position: relative;
-      margin-bottom: 35px;
-      margin: 68px;
-    }
-    .buttons {
-      position: relative;
-      top: -206px;
-    }
+  .menu-icon {
+    display: block;
+    position: absolute;
+    float: right;
+    top: 45px;
+    left: 8px;
+    font-size: 1.4rem;
+    width: 100%;
+  }
+  .rightsection img {
+    top: 30px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .leftsection div {
+    margin-top: 74px;
+    margin-bottom: -69px;
+  }
+  #element {
+
+  
+  .menu-icon {
+   display: block;
+   position: absolute;
+   float: right;
+   top: 45px;
+   left: 8px;
+   font-size: 1.4rem;
+   width: 100%;
+  }
+  .rightsection img{
+    top:30px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .leftsection div{
+    margin-top: 74px;
+    margin-bottom: -69px;
+  }
+  #element{
+
+    position: relative;
+    margin-bottom: 35px;
+    margin: 68px;
+  }
+  .buttons {
+    position: relative;
+    top: -206px;
+  }
 
     hr {
       position: relative;
@@ -796,6 +818,5 @@ nav ul li a:hover {
       margin-bottom: 50px;
     }
   }
+}    
 }
-
-
