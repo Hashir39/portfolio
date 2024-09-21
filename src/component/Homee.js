@@ -85,19 +85,18 @@ const Home = () => {
         </nav>
       </header>
       <main>
-
         <section className="firstsection">
           <div className="leftsection">
-            <div>Hi, My Name is <span className="purple">Hashir</span></div>
+           <div>Hi, My Name is <span className="purple">Hashir</span></div>
             <div>and I'm a</div>
             <div>
       <TypedComponent />
        </div>
             <span id="element"></span>
             <div className="buttons">
-              <button className="btn" onClick={handleDownloadResume} >Download Resume</button>
+              <button className="btn hide-btn" onClick={handleDownloadResume} >Download Resume</button>
               <a href="https://github.com/Hashir39" target="_blank" rel="noopener noreferrer">
-                <button className="btn">Visit Github</button>
+                <button className="btn hide-btn">Visit Github</button>
               </a>
             </div>
           </div>
@@ -151,7 +150,7 @@ const Home = () => {
         </Element>
       </main>
       <Project/>
-
+     <hr className='hrr'/>
       <Contact/>
 
       <Footer/>

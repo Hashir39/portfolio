@@ -4,7 +4,9 @@ import { Element } from 'react-scroll';
 
 function Contact() {
     return (
+        
         <Element name="contact">
+            
             <section className="contact-section mt-24">
                 <h1 className='cursor-pointer hover:text-blue-300 '>Contact Me</h1>
                 <form action="https://formspree.io/f/mjvnvyvj" method="POST" className='contact-form'>
