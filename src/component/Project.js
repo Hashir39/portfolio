@@ -1,7 +1,7 @@
 import React from 'react';
-import project1 from './project 1.png'; 
+import project2 from './project 1.png'; 
 import project3 from './project 3.png';
-import project2 from './project 2.png';
+import project1 from './project 2.png';
 import { Element } from 'react-scroll';
 import '../project.css';
 
@@ -44,10 +44,10 @@ const ProjectCard = ({ image, title, description, git, technologies }) => {
 const Project = () => {
     const projectData = [
         {
-            title: 'WordCaseWizard',
-            description: 'WordCaseWizard is a text manipulation tool that simplifies editing with features like uppercase lowercase transformations, copying, clearing, and reading time estimation. It also includes a dark mode for a better user experience.',
+            title: 'DailyPress',
+            description: 'DailyPress is a versatile news platform offering updates across various categories like science, entertainment, sports,  and politics. It features a user-friendly interface for easy navigation and access to diverse, timely news articles.',
             image: project1,
-            git: 'https://github.com/Hashir39/WordCaseWizard',
+            git: 'https://github.com/Hashir39/DailyPress',
             technologies: [''],
         },
         {
@@ -73,7 +73,7 @@ const Project = () => {
                 <div className="ttitle text-center mt-8 cursor-pointer">
                     <h1 className="my-projects text-3xl hover:text-blue-300 transition-colors duration-300 mb-12">My Projects</h1>
                 </div>
-                <div className="flex flex-wrap gap-40 justify-center items-center gap-12 main-div -m-5 p-12">
+                <div className="flex flex-wrap gap-40 justify-center items-center gap-10 main-div -m-5 p-12">
                     {projectData.map((item, index) => (
                         <ProjectCard
                             key={index}
