@@ -73,7 +73,7 @@ const Project = () => {
                 <div className="ttitle text-center mt-8 cursor-pointer">
                     <h1 className="my-projects text-3xl hover:text-blue-300 transition-colors duration-300 mb-12">My Projects</h1>
                 </div>
-                <div className="flex flex-wrap gap-40 justify-center items-center gap-10 main-div -m-5 p-12">
+                <div className="flex flex-wrap justify-center items-center gap-10 main-div -m-5 p-12">
                     {projectData.map((item, index) => (
                         <ProjectCard
                             key={index}
