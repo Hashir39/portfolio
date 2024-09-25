@@ -456,6 +456,7 @@ nav ul li a:hover {
   display: none;
 }
 
+
 @media screen and (max-width: 600px) {
     html, body , #root {
     min-width: -moz-fit-content !important;
@@ -467,6 +468,7 @@ nav ul li a:hover {
     gap: 12em !important;
   }
   .left {
+    display: flex;
     font-size: 0.9rem;
     margin-left: 7rem;
     margin-top: 2.1rem;
@@ -527,6 +529,7 @@ nav ul li a:hover {
     color: #d4c6c6;
   } 
   .leftsection {
+    
     font-size: 1.5rem;
     margin-bottom: 3rem;
     margin-right: 22rem;
@@ -688,6 +691,9 @@ nav ul li a:hover {
   }
   .firstsection {
     flex-direction: column-reverse;
+  }
+  .secondsection .vertical{
+    display: flex;
   }
   .vertical-title {
     left: 45px;
@@ -866,23 +872,21 @@ nav ul li a:hover {
   .rightsection img{
     margin-left: 2rem;
   }
-  .animation{
-    
-  }
+  
   .left {
-    margin-left: 8.4rem !important;
+    margin-left: 8rem !important;
   }
   .secondsection{
     margin-left: 12rem;
   }
   .my-projects{
     margin-top: 4rem !important;
-    margin-left: -5.5rem !important;
+    margin-left: -6rem !important;
     font-size: 2rem !important;
     font-weight: 500 !important;
   }
   .project-card{
-       margin-left: -6.4rem;
+       margin-left: -6.9rem;
   }
   .contact-section{
     margin-left: 10.7rem;

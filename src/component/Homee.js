@@ -107,7 +107,7 @@ const Home = () => {
         <hr className='fshr' />
 
         <Element name="about">
-          <section className="secondsection">
+          <section className="secondsection" >
             <span className="textgray">What I have Done so far</span>
             <h1>Work Experience</h1>
 
