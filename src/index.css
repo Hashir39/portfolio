@@ -11,7 +11,6 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 nav {
   width: 100%;
@@ -84,7 +83,6 @@ nav ul li a:hover {
   color: rgb(151, 75, 223);
 }
 
-/* Adjust this CSS for the "What I have Done So Far" section */
 .secondsection {
   max-width: 80vw;
   margin: 60px auto;
@@ -92,9 +90,8 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center content vertically */
-  text-align: center; /* Center text horizontally */
-}
+  justify-content: center;
+  text-align: center; }
 
 .secondsection h1 {
   font-size: 1.3rem;
@@ -108,9 +105,9 @@ nav ul li a:hover {
 }
 .secondsection hr {
   border: none;
-  height: 2px; /* Adjust the thickness of the line */
-  background-color: #060518; /* Line color */
-  margin: 20px 0; /* Adjust the margin as needed */
+  height: 2px; 
+  background-color: #060518; 
+  margin: 20px 0; 
   position: relative;
 }
 
@@ -119,19 +116,19 @@ nav ul li a:hover {
   content: "";
   position: absolute;
   top: 50%;
-  width: 20px; /* Adjust the length of the diagonal lines */
-  height: 1px; /* Adjust the thickness of the cutout lines */
-  background-color: #9c97f1; /* Match the line color */
+  width: 20px;
+  height: 1px; 
+  background-color: #9c97f1; 
 }
 
 .secondsection hr::before {
   left: 0;
-  transform: translateY(-50%) rotate(-45deg); /* Rotate -45 degrees for the left cutout */
+  transform: translateY(-50%) rotate(-45deg); 
 }
 
 .secondsection hr::after {
   right: 0;
-  transform: translateY(-50%) rotate(45deg); /* Rotate 45 degrees for the right cutout */
+  transform: translateY(-50%) rotate(45deg); 
 }
 
 .secondsection .box {
@@ -256,201 +253,9 @@ nav ul li a:hover {
 .caption-style {
   font-style: italic;
   font-weight: bold;
-  font-size: larger; /* Adjust as needed */
-}
-/* .my-work{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 80px;
-  margin: 80px 170px;
-}
-.ttitle{
-  position: relative;
-}
-.ttitle h1{
-  padding: 0px 30px;
-  font-size: 20px;
-  font-weight: 550;
-} */
-/* .project-section {
-  background-color: rgb(0, 0, 34);
-  padding: 50px 0;
-  color: white;
-  text-align: center;
+  font-size: larger; 
 }
 
-.project-section h1 {
-<<<<<<< HEAD
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.726);
-  font-size: 1.2em;
-  margin-top: -20px;
-  font-family: "Poppins", sans-serif;
-=======
-  color: rgba(255, 255, 255, 0.726); 
-  font-size: 1.8em; 
-  display: block;
-  margin-bottom: 33px;
-  font-family: 'Poppins', sans-serif;
-
-}
-
-.project-section h1:hover {
-  color: #827b7b;
-} */
-
-/* .project-title {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.project-description {
-  margin-top: 10px;
-  color: #666;
-} 
-
-.row {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-} */
-
-/* .column {
-  min-height: 356px;
-  margin-top: 20px;
-  border-radius: 13px;
-  border: 1.5px solid rgb(196, 151, 151);
-  width: 45%;
-  padding: 7px;
-  box-sizing: border-box;
-} */
-
-/* .project-image {
-  box-sizing: border-box;
-  width: 419px;
-  height: 280px;
-  transition: 0.3s;
-  cursor: pointer;
-  &:hover{
-    transform: scale(1.10);
-    border: 4px solid #7a377a;
-    border-radius: 10px;
-    transition: 0.3s;
-  }
-} */
-
-/* .title {
-  font-size: 0.95rem;
-  color: white;
-  margin-top: -5px;
-  margin-bottom: 5px;
-}
-
-.descc {
-  color: gray;
-  font-size: 0.7rem;
-  line-height: 1rem;
-  text-align: left;
-  margin: 0;
-  padding: 0;
-} 
-
-.github-button {
-  position: relative;
-  background-color: #333; 
-  color: #fff; 
-  border: none;
-  border-radius: 5px;
-  padding: 11px 20px;
-  font-size: 12px;
-  cursor: pointer;
-  margin: 10px auto 0; 
-  text-align: center;
-  display: block; 
-  text-decoration: none;
-}
-
-<<<<<<< HEAD
-.github-button:hover {
-  background-color: #555; 
-} */
-
-/* .projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.75rem; 
-  justify-content: center;
-  align-items: center;
-  margin: 3rem;
-  padding: 3rem;
-}
-
-.project-card {
-  max-width: 300px;
-  background-color: #1a202c; 
-  border: 1px solid #e5e7eb; 
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: white;
-  text-align: center;
-  overflow: hidden;
-}
-
-.project-image {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #e5e7eb; 
-}
-
-.project-details {
-  padding: 1rem;
-}
-
-.project-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  background: linear-gradient(to right, #fefcbf, #fbbf24); 
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.project-description {
-  font-size: 1rem;
-  color: #d1d5db;
-}
-
-.project-footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.tech-tag {
-  font-size: 0.875rem;
-  color: #3b82f6;
-}
-
-.github-link {
-  color: #f87171; 
-  border: 1px solid #e5e7eb; 
-  border-radius: 0.375rem; 
-  padding: 0.25rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.github-link:hover {
-  color: #34d399; 
-} */
 
 .menu-icon {
   display: none;
@@ -459,10 +264,7 @@ nav ul li a:hover {
 
 @media screen and (max-width: 600px) {
     html, body , #root {
-    min-width: -moz-fit-content !important;
     min-width: fit-content !important;
-    overflow-x: hidden !important;
-    width: 100vw;
   }
   .main-div{
     gap: 12em !important;
@@ -506,9 +308,9 @@ nav ul li a:hover {
   .nav-links.show {
     position: absolute;
     top: 52px;
-    left: 6px;
-    width: 100vw;
-    height: 100vw;
+    left: 0px;
+    width: 60vw;
+    height: 20em;
     z-index: 10;
     display: block;
     background-color: var(--color-1);
@@ -527,6 +329,7 @@ nav ul li a:hover {
   .nav-links a {
     text-decoration: none;
     color: #d4c6c6;
+    margin-left: -1rem;
   } 
   .leftsection {
     
@@ -864,7 +667,7 @@ nav ul li a:hover {
   }
 } 
 
-@media screen and (min-width: 371px) and (max-width: 450px) {
+@media screen and (min-width: 371px) and (max-width: 430px) {
   body, html, #root {
     width: 100vw !important;
     overflow-x: hidden !important;
@@ -874,27 +677,158 @@ nav ul li a:hover {
   }
   
   .left {
-    margin-left: 8rem !important;
+    margin-left: 7.6rem !important;
   }
   .secondsection{
-    margin-left: 12rem;
+    margin-left: 11.6rem;
   }
   .my-projects{
     margin-top: 4rem !important;
-    margin-left: -6rem !important;
+    margin-left: -7rem !important;
     font-size: 2rem !important;
     font-weight: 500 !important;
   }
   .project-card{
-       margin-left: -6.9rem;
+       margin-left: -7.9rem;
   }
   .contact-section{
-    margin-left: 10.7rem;
+    margin-left: 10.1rem;
+  }
+  .contact-form{
+    margin-left: 1rem;
+    width: 75vw;
   }
   .footer{
-    margin-left: 0.6rem;
+    margin-left: 0.1rem;
+  }
+  .contact-section .imgggg {
+    display: grid;
+    grid-template-columns: 0.9fr 0.9fr 0.9fr 0.9fr;
   }
   .firstsection{
     margin-left: 0.5rem;
+  }
+}
+@media screen and (min-width: 171px) and (max-width: 340px){
+  .secondsection{
+    flex-wrap: wrap;
+    margin-left: 16em  !important;
+  }
+  .contact-form{
+    width: 161vw !important;
+  }
+  .contact-section .imgggg{
+    display: grid;
+    grid-template-columns: 0.9fr 0.9fr 0.9fr 0.9fr;
+  }
+}
+@media screen and (min-width: 216px) and (max-width: 240px){
+  .secondsection{
+    flex-wrap: wrap;
+    margin-left: 14.8em  !important;
+  }
+  .contact-form{
+    width: 131vw !important;
+  }
+}
+@media screen and (min-width: 241px) and (max-width: 270px){
+  .secondsection{
+    flex-wrap: wrap;
+    margin-left: 13.7em  !important;
+  }
+  .contact-form{
+    width: 131vw !important;
+  }
+}
+@media screen and (min-width: 271px) and (max-width: 339px){
+  .secondsection{
+    flex-wrap: wrap;
+    margin-left: 13.5em  !important;
+  }
+  .contact-form{
+    width: 101vw !important;
+  }
+}
+@media screen and (min-width: 451px) and (max-width: 500px){
+  .secondsection{
+    flex-wrap: wrap;
+    margin-left: 11em;
+  }
+  .contact-section{
+    margin-left: 8.2rem;
+  }
+  .contact-form{
+    width: 57vw;
+  }
+  .contact-section .imgggg {
+    display: grid;
+    grid-template-columns: 0.9fr 0.9fr 0.9fr 0.9fr;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 549px){
+.contact-form{
+  width: 50vw;
+}}
+@media screen and (min-width: 551px) and (max-width: 599px){
+  .secondsection{
+    flex-wrap: wrap;
+    margin-left: 11em;
+  }
+  .contact-form{
+    width: 51vw;
+  }
+}
+@media screen and (min-width: 171px) and (max-width: 230px){
+  .secondsection{
+    flex-wrap: wrap;
+    margin-left: 15em;
+  }
+  .contact-form{
+    width: 121vw;
+  }
+}
+@media screen and (min-width: 231px) and (max-width: 299px){
+  .secondsection{
+    flex-wrap: wrap;
+    margin-left: 14em;
+  }
+  .contact-form{
+    width: 121vw;
+  }
+}
+@media screen and (min-width: 431px) and (max-width: 450px){
+  .contact-form{
+    width: 70vw;
+  }
+  .secondsection{
+    margin-left: 10.5rem;
+  }
+}
+@media screen and (min-width: 100px) and (max-width: 169px){
+  .left{
+    margin-right: 10rem;
+  }
+  .rightsection img{
+    margin-left: -2rem;
+  }
+  .leftsection{
+    margin-left: -2rem;
+  }
+  .secondsection{
+    margin-left: 15rem;
+  }
+  .project-card{
+    display: grid;
+    width: 65%;
+    margin-left: -9.22rem;
+  }
+  .contact-section{
+    margin-right: 10.7rem;
+  }
+  .contact-form{
+    width: 140vw;
+  }
+  .footer{
+    margin-left: -1.65rem;
   }
 }

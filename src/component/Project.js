@@ -65,7 +65,7 @@ const Project = () => {
     const projectData = [
         {
             title: 'StyleCove',
-            description: 'StyleCove is a MERN stack e-commerce platform for Mes, Womens, and Kids fashion. It offers a user-friendly interface for easy browsing and an admin panel for efficient product management and browsing.',
+            description: 'StyleCove is a MERN Stack e-commerce platform for Men, Women, and Kids fashion. It offers a user-friendly interface for easy browsing and an admin panel for efficient product management and browsing.',
             image: [project4,project42,project43,project44,project45],
             git: '',
             technologies: [''],
@@ -96,7 +96,7 @@ const Project = () => {
 
     return (
         <div className='my-work'>
-            <Element name="project ">
+            <Element name="project">
                 <div className="ttitle text-center mt-8 cursor-pointer">
                     <h1 className="my-projects text-3xl hover:text-blue-300 transition-colors duration-300 mb-12">My Projects</h1>
                 </div>
