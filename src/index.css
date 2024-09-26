@@ -692,10 +692,17 @@ nav ul li a:hover {
        margin-left: -7.9rem;
   }
   .contact-section{
+
     margin-left: 10.1rem;
   }
   .contact-form{
     margin-left: 1rem;
+
+    margin-left: 9.2rem;
+  }
+  .contact-form{
+    margin-left: 1.1rem;
+
     width: 75vw;
   }
   .footer{
@@ -712,6 +719,7 @@ nav ul li a:hover {
 @media screen and (min-width: 171px) and (max-width: 340px){
   .secondsection{
     flex-wrap: wrap;
+
     margin-left: 16em  !important;
   }
   .contact-form{
@@ -750,32 +758,57 @@ nav ul li a:hover {
   }
 }
 @media screen and (min-width: 451px) and (max-width: 500px){
+
+    margin-left: 13em;
+  }
+  .contact-form{
+    width: 101vw;
+  }
+  .contact-section .imgggg{
+    width: 153px;
+    gap: 5px;
+    margin-left: -1rem;
+  }
+}
+@media screen and (min-width: 451px) and (max-width: 550px){
+
   .secondsection{
     flex-wrap: wrap;
     margin-left: 11em;
   }
+
   .contact-section{
     margin-left: 8.2rem;
   }
   .contact-form{
     width: 57vw;
+
+  .contact-form{
+    width: 61vw;
+
   }
   .contact-section .imgggg {
     display: grid;
     grid-template-columns: 0.9fr 0.9fr 0.9fr 0.9fr;
   }
 }
+
 @media screen and (min-width: 501px) and (max-width: 549px){
 .contact-form{
   width: 50vw;
 }}
+
 @media screen and (min-width: 551px) and (max-width: 599px){
   .secondsection{
     flex-wrap: wrap;
     margin-left: 11em;
   }
   .contact-form{
+
     width: 51vw;
+
+    width: 61vw;
+
   }
 }
 @media screen and (min-width: 171px) and (max-width: 230px){
@@ -796,6 +829,7 @@ nav ul li a:hover {
     width: 121vw;
   }
 }
+
 @media screen and (min-width: 431px) and (max-width: 450px){
   .contact-form{
     width: 70vw;
@@ -832,3 +866,4 @@ nav ul li a:hover {
     margin-left: -1.65rem;
   }
 }
+

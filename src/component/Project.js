@@ -65,9 +65,13 @@ const Project = () => {
     const projectData = [
         {
             title: 'StyleCove',
+
             description: 'StyleCove is a MERN Stack e-commerce platform for Men, Women, and Kids fashion. It offers a user-friendly interface for easy browsing and an admin panel for efficient product management and browsing.',
+
+            description: 'StyleCove is a MERN stack e-commerce platform for Men, Women, and Kids fashion. It offers a user-friendly interface for easy browsing and an admin panel for efficient product management and browsing.',
+
             image: [project4,project42,project43,project44,project45],
-            git: '',
+            git: 'https://github.com/Hashir39/StyleCove',
             technologies: [''],
         },
         {
