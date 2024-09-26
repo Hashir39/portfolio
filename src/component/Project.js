@@ -96,7 +96,7 @@ const Project = () => {
 
     return (
         <div className='my-work'>
-            <Element name="project ">
+            <Element name="project">
                 <div className="ttitle text-center mt-8 cursor-pointer">
                     <h1 className="my-projects text-3xl hover:text-blue-300 transition-colors duration-300 mb-12">My Projects</h1>
                 </div>
