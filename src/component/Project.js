@@ -7,6 +7,8 @@ import project42 from './project42.png'
 import project43 from './project43.png'
 import project44 from './project44.png'
 import project45 from './project45.png'
+import project6 from './project6.jpeg'
+import project61 from './project61.jpeg'
 import { Element } from 'react-scroll';
 import { useState, useEffect } from 'react';
 import '../project.css';
@@ -65,13 +67,16 @@ const Project = () => {
     const projectData = [
         {
             title: 'StyleCove',
-
             description: 'StyleCove is a MERN Stack e-commerce platform for Men, Women, and Kids fashion. It offers a user-friendly interface for easy browsing and an admin panel for efficient product management and browsing.',
-
-            description: 'StyleCove is a MERN stack e-commerce platform for Men, Women, and Kids fashion. It offers a user-friendly interface for easy browsing and an admin panel for efficient product management and browsing.',
-
             image: [project4,project42,project43,project44,project45],
             git: 'https://github.com/Hashir39/StyleCove',
+            technologies: [''],
+        },
+        {
+            title: "Let's Chat",
+            description: "Let's Chat is a real-time messaging app built with the MERN stack, featuring Socket.io for instant communication. Styled with Tailwind CSS and DaisyUI, it offers a clean, modern interface, multiple chat rooms, and smooth messaging.",
+            image: [project6,project61],
+            git: 'https://github.com/Hashir39/Chat-App',
             technologies: [''],
         },
         {
@@ -104,7 +109,7 @@ const Project = () => {
                 <div className="ttitle text-center mt-8 cursor-pointer">
                     <h1 className="my-projects text-3xl hover:text-blue-300 transition-colors duration-300 mb-12">My Projects</h1>
                 </div>
-                <div className="flex flex-wrap justify-center items-center gap-10 main-div -m-5 p-12">
+                <div className="flex flex-wrap justify-center items-center gap-10 main-div m-5 p-25">
                     {projectData.map((item, index) => (
                         <ProjectCard
                             key={index}

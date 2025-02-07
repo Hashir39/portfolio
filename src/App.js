@@ -1,16 +1,19 @@
 import './App.css';
 import Home from './component/Homee';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Project from './component/Project';
+import Contact from './component/Contact';
+import Footer from './component/Footer';
+
 
 
 function App() {
   return (
-    <>
-    <Router >
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-      </Routes>
-    </Router>
+    <> 
+      <Home />
+      <Project />
+      <hr className='hrr' />
+      <Contact />
+      <Footer />
     </>
   );
 }

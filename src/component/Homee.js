@@ -6,10 +6,7 @@ import node from './node.png'
 import { Link as ScrollLink } from 'react-scroll';
 import Typed from 'typed.js';
 import { Element } from 'react-scroll';
-import Project from './Project'
 
-import Contact from './Contact'
-import Footer from './Footer';
 
 
 
@@ -42,72 +39,102 @@ const Home = () => {
     anchor.click();
   };
   const navLinksRef = useRef(null);
+  const menuIconRef = useRef(null);
+
 
   const toggleMenu = () => {
-    console.log('Toggle menu called!');
-    navLinksRef.current.classList.toggle('show');
+    const isMenuOpen = navLinksRef.current.classList.toggle('show');
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
+    
   };
 
+  const closeMenu = () => {
+    navLinksRef.current.classList.remove('show');
+    document.body.style.overflow = 'auto'; 
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Check if click target is outside both the nav-links and menu icon
+      if (
+        navLinksRef.current &&
+        menuIconRef.current &&
+        !navLinksRef.current.contains(event.target) &&
+        !menuIconRef.current.contains(event.target)
+      ) {
+        closeMenu(); // Close menu if clicked outside
+      }
+    };
+
+    // Attach the event listener to the document
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // Cleanup the event listener on unmount
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <>
+    <div>
       <header>
         <nav>
           <div className="left">Hashir's Portfolio</div>
           <div className="right">
-            <div className="menu-icon" onClick={toggleMenu}>&#9776;</div>
+            <div ref={menuIconRef} className="menu-icon" onClick={toggleMenu}>&#9776;</div>
             <ul ref={navLinksRef} className='nav-links'>
               <li>
                 <ScrollLink to="home"
                   smooth="true"
                   offset={500}
-                  duration={500} style={{ cursor: 'pointer' }} >Home</ScrollLink>
+                  duration={500} style={{ cursor: 'pointer' }} onClick={closeMenu} >Home</ScrollLink>
               </li>
               <li>
                 <ScrollLink to="about"
                   smooth="true"
                   offset={-100}
-                  duration={500} style={{ cursor: 'pointer' }} >Skills</ScrollLink>
+                  duration={500} style={{ cursor: 'pointer' }} onClick={closeMenu} >Skills</ScrollLink>
               </li>
               <li>
                 <ScrollLink to="project"
                   smooth="true"
                   offset={-100}
-                  duration={500} style={{ cursor: 'pointer' }} >Projects</ScrollLink>
+                  duration={500} style={{ cursor: 'pointer' }} onClick={closeMenu} >Projects</ScrollLink>
               </li>
               <li>
                 <ScrollLink to="contact"
                   smooth="true"
                   offset={-100}
-                  duration={500} style={{ cursor: 'pointer' }} >Contact me</ScrollLink>
+                  duration={500} style={{ cursor: 'pointer' }} onClick={closeMenu}  >Contact me</ScrollLink>
               </li>
             </ul>
           </div>
         </nav>
       </header>
       <main>
-        
-          <section className="firstsection">
-            <div className="leftsection">
-              <div>Hi, My Name is <span className="purple">Hashir</span></div>
-              <div>and I'm a</div>
-              <div>
-                <TypedComponent />
-              </div>
-              <span id="element"></span>
-              <div className="buttons">
-                <button className="btn hide-btn" onClick={handleDownloadResume} >Download Resume</button>
-                <a href="https://github.com/Hashir39" target="_blank" rel="noopener noreferrer">
-                  <button className="btn hide-btn">Visit Github</button>
-                </a>
-              </div>
-            </div>
-            <div className="rightsection">
-              <img src={downloadimage} alt="" />
-            </div>
-          </section>
-          <hr className='fshr' />
 
-          <Element name="about">
+        <section className="firstsection">
+          <div className="leftsection">
+            <div>Hi, My Name is <span className="purple">Hashir</span></div>
+            <div>and I'm a</div>
+            <div>
+              <TypedComponent />
+            </div>
+            <span id="element"></span>
+            <div className="buttons">
+              <button className="btn hide-btn" onClick={handleDownloadResume} >Download Resume</button>
+              <a href="https://github.com/Hashir39" target="_blank" rel="noopener noreferrer">
+                <button className="btn hide-btn">Visit Github</button>
+              </a>
+            </div>
+          </div>
+          <div className="rightsection">
+            <img src={downloadimage} alt="" />
+          </div>
+        </section>
+        <hr className='fshr' />
+
+        <Element name="about">
           <section className="secondsection" >
             <span className="textgray">What I have Done so far</span>
             <h1>Work Experience</h1>
@@ -149,13 +176,9 @@ const Home = () => {
             </div>
           </section>  <hr /></Element>
       </main>
-      <Project />
-      <hr className='hrr' />
-      <Contact />
 
-      <Footer />
 
-    </>
+    </div>
   );
 }
 
