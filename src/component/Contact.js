@@ -37,9 +37,7 @@ function Contact() {
                         <a href="https://www.facebook.com/profile.php?id=100012776148523" target="_blank" rel="noopener noreferrer">
                             <img src="./fb.png" alt="Facebook" className='imgss' />
                         </a>
-                        <a href="https://x.com/Hashir44681012" target="_blank" rel="noopener noreferrer">
-                            <img src="./twitter.png" alt="Twitter" className='imgss' />
-                        </a>
+                
                         <a href="https://www.linkedin.com/in/muhammad-hashir-4b3959268/" target="_blank" rel="noopener noreferrer">
                             <img src="./linkedin (2).png" alt="Linkedin" className='imgss' />
                         </a>
