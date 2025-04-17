@@ -28,7 +28,7 @@ const ProjectCard = ({ image, title, description, git, technologies }) => {
     
     return (
 
-        <div className="max-w-sm sm:max-w-sm md:max-w-sm bg-gray-900 border border-neutral-100 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 project-card">
+        <div className="max-w-sm sm:max-w-sm md:max-w-sm bg-gray-900 border border-neutral-100 rounded-lg shadow dark:bg-[#0a1421] dark:border-gray-700 project-card">
             {image && (
                 <div className='image-container'>
                     <img className="p-1 w-full animate-changeImage rounded-t-lg h-auto object-cover mt-0.5 project-image" src={image[currentIndex]} alt={title} />
