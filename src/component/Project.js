@@ -3,6 +3,9 @@ import project2 from './project 1.png';
 import project3 from './project 3.png';
 import project1 from './project 2.png';
 import project4 from './project4.png'
+import project7 from './project7.jpg'
+import project71 from './project71.jpg'
+import project72 from './project72.jpg'
 import project42 from './project42.png'
 import project43 from './project43.png'
 import project44 from './project44.png'
@@ -20,7 +23,7 @@ const ProjectCard = ({ image, title, description, git, technologies }) => {
         if (image.length > 1) {
           const intervalId = setInterval(() => {
             setCurrentIndex((currentIndex) => (currentIndex + 1) % image.length);
-          }, 2000); // change image every 2 seconds
+          }, 4000); // change image every 2 seconds
       
           return () => clearInterval(intervalId);
         }
@@ -66,19 +69,27 @@ const ProjectCard = ({ image, title, description, git, technologies }) => {
 const Project = () => {
     const projectData = [
         {
-            title: 'StyleCove',
-            description: 'StyleCove is a MERN Stack e-commerce platform for Men, Women, and Kids fashion. It offers a user-friendly interface for easy browsing and an admin panel for efficient product management and browsing.',
-            image: [project4,project42,project43,project44,project45],
+            title: 'AI CHATBOT',
+            description: 'AI Chatbot is a real-time chat app built with the MERN stack and integrated with the OpenAI API to provide AI-driven replies. It includes Clerk-based authentication for login and sign-up, stores chat history for a seamless experience.',
+            image: [project7,project71,project72],
             git: 'https://github.com/Hashir39/StyleCove',
             technologies: [''],
         },
-        {
+         {
             title: "Let's Chat",
             description: "Let's Chat is a real-time messaging app built with the MERN stack, featuring Socket.io for instant communication. Styled with Tailwind CSS and DaisyUI, it offers a clean, modern interface, multiple chat rooms, and smooth messaging.",
             image: [project6,project61],
             git: 'https://github.com/Hashir39/Chat-App',
             technologies: [''],
         },
+        {
+            title: 'StyleCove',
+            description: 'StyleCove is a MERN Stack e-commerce platform for Men, Women, and Kids fashion. It offers a user-friendly interface for easy browsing and an admin panel for efficient product management and browsing.',
+            image: [project4,project42,project43,project44,project45],
+            git: 'https://github.com/Hashir39/StyleCove',
+            technologies: [''],
+        },
+       
         {
             title: 'DailyPress',
             description: 'DailyPress is a versatile news platform offering updates across various categories like science, entertainment, sports,  and politics. It features a user-friendly interface for easy navigation and access to diverse, timely news articles.',
@@ -129,4 +140,5 @@ const Project = () => {
 };
 
 export default Project;
+
 
