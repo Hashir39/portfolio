@@ -72,7 +72,7 @@ const Project = () => {
             title: 'AI CHATBOT',
             description: 'AI Chatbot is a real-time chat app built with the MERN stack and integrated with the OpenAI API to provide AI-driven replies. It includes Clerk-based authentication for login and sign-up, stores chat history for a seamless experience.',
             image: [project7,project71,project72],
-            git: 'https://github.com/Hashir39/StyleCove',
+            git: 'https://github.com/Hashir39/Aichatbot',
             technologies: [''],
         },
          {
