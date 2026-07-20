@@ -32,7 +32,8 @@ const TypedComponent = () => {
 const Home = () => {
 
   const handleDownloadResume = () => {
-    const resumeUrl = '/resume.pdf';
+    // const resumeUrl = '/resume.pdf';
+    const resumeUrl = '/HashirResume.pdf';
     const anchor = document.createElement('a');
     anchor.href = resumeUrl;
     anchor.download = 'Hashir_Resume.pdf';
