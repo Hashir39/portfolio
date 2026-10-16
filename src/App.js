@@ -1,8 +1,8 @@
-import './App.css';
-import Home from './component/Homee';
-import Project from './component/Project';
-import Contact from './component/Contact';
-import Footer from './component/Footer';
+import './styles/App.css';
+import Home from './components/Home';
+import Project from './components/Project';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 
 

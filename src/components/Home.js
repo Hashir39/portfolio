@@ -1,20 +1,16 @@
-import React, { useEffect, useRef } from 'react'
-// import { Link } from 'react-router-dom';
-import downloadimage from './download.png';
-import pngegg from './pngegg.png';
-import node from './node.png'
+import React, { useEffect, useRef, useState } from 'react'
+import downloadimage from '../assets/images/hero/download.png';
+import pngegg from '../assets/images/skills/pngegg.png';
+import node from '../assets/images/skills/node.png'
+import resumePdf from './Hashir Resume.pdf';
 import { Link as ScrollLink } from 'react-scroll';
 import Typed from 'typed.js';
 import { Element } from 'react-scroll';
 
-
-
-
-
 const TypedComponent = () => {
   useEffect(() => {
     const options = {
-      strings: ["MERN Stack Developer", "Front-End Developer", "React JS Developer"],
+      strings: ["MERN Stack Developer", "Full Stack Developer", "React JS Developer"],
       typeSpeed: 50,
       loop: true
     };
@@ -32,81 +28,98 @@ const TypedComponent = () => {
 const Home = () => {
 
   const handleDownloadResume = () => {
-    // const resumeUrl = '/resume.pdf';
-    const resumeUrl = '/HashirResume.pdf';
     const anchor = document.createElement('a');
-    anchor.href = resumeUrl;
-    anchor.download = 'Hashir_Resume.pdf';
+    anchor.href = resumePdf;
+    anchor.download = 'Hashir Resume.pdf';
     anchor.click();
   };
   const navLinksRef = useRef(null);
   const menuIconRef = useRef(null);
-
-
-  const toggleMenu = () => {
-    const isMenuOpen = navLinksRef.current.classList.toggle('show');
-    document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
-    
-  };
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const closeMenu = () => {
-    navLinksRef.current.classList.remove('show');
-    document.body.style.overflow = 'auto'; 
+    setMenuOpen(false);
+    document.body.style.overflow = 'auto';
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen((open) => {
+      const next = !open;
+      document.body.style.overflow = next ? 'hidden' : 'auto';
+      return next;
+    });
   };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // Check if click target is outside both the nav-links and menu icon
       if (
         navLinksRef.current &&
         menuIconRef.current &&
         !navLinksRef.current.contains(event.target) &&
         !menuIconRef.current.contains(event.target)
       ) {
-        closeMenu(); // Close menu if clicked outside
+        closeMenu();
       }
     };
 
-    // Attach the event listener to the document
-    document.addEventListener('mousedown', handleClickOutside);
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        closeMenu();
+      }
+    };
 
-    // Cleanup the event listener on unmount
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleEscape);
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
     };
   }, []);
 
   return (
     <div>
       <header>
+        {menuOpen && <div className="nav-backdrop" onClick={closeMenu} />}
         <nav>
           <div className="left">Hashir's Portfolio</div>
           <div className="right">
-            <div ref={menuIconRef} className="menu-icon" onClick={toggleMenu}>&#9776;</div>
-            <ul ref={navLinksRef} className='nav-links'>
+            <button
+              ref={menuIconRef}
+              className={menuOpen ? 'menu-icon open' : 'menu-icon'}
+              onClick={toggleMenu}
+              type="button"
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={menuOpen}
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+            <ul ref={navLinksRef} className={menuOpen ? 'nav-links show' : 'nav-links'}>
               <li>
-                <ScrollLink to="home"
+                <ScrollLink to="home" className="nav-link"
                   smooth="true"
                   offset={500}
-                  duration={500} style={{ cursor: 'pointer' }} onClick={closeMenu} >Home</ScrollLink>
+                  duration={500} onClick={closeMenu} >Home</ScrollLink>
               </li>
               <li>
-                <ScrollLink to="about"
+                <ScrollLink to="about" className="nav-link"
                   smooth="true"
                   offset={-100}
-                  duration={500} style={{ cursor: 'pointer' }} onClick={closeMenu} >Skills</ScrollLink>
+                  duration={500} onClick={closeMenu} >Skills</ScrollLink>
               </li>
               <li>
-                <ScrollLink to="project"
+                <ScrollLink to="project" className="nav-link"
                   smooth="true"
                   offset={-100}
-                  duration={500} style={{ cursor: 'pointer' }} onClick={closeMenu} >Projects</ScrollLink>
+                  duration={500} onClick={closeMenu} >Projects</ScrollLink>
               </li>
               <li>
-                <ScrollLink to="contact"
+                <ScrollLink to="contact" className="nav-link"
                   smooth="true"
                   offset={-100}
-                  duration={500} style={{ cursor: 'pointer' }} onClick={closeMenu}  >Contact me</ScrollLink>
+                  duration={500} onClick={closeMenu} >Contact me</ScrollLink>
               </li>
             </ul>
           </div>
@@ -144,7 +157,7 @@ const Home = () => {
               <div className="vertical">
                 <img
                   className="img1"
-                  src='./frontend.png'
+                  src='/images/frontend.png'
                   alt=""
                 />
                 <div className="vertical-title hover:text-blue-300 cursor-pointer">Front-End Web Developer</div>
@@ -153,7 +166,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="vertical">
-                <img className="img1" src='./web-developer.png' alt="" />
+                <img className="img1" src='/images/web-developer.png' alt="" />
 
                 <div className="vertical-title hover:text-blue-300 cursor-pointer">Full-Stack Developer</div>
                 <div className="vertical-desc hover:text-yellow-50">
