@@ -8,10 +8,11 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <> 
+    <>
       <Home />
+      <div className="section-divider" aria-hidden="true" />
       <Project />
-      <hr className='hrr' />
+      <div className="section-divider" aria-hidden="true" />
       <Contact />
       <Footer />
     </>

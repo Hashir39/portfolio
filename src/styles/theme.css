@@ -1,0 +1,41 @@
+:root {
+  --bg-base: #0f141f;
+  --bg-elevated: #141a26;
+  --bg-surface: #1a2130;
+  --bg-input: #212938;
+
+  --text-primary: #c2cad6;
+  --text-secondary: #8791a4;
+  --text-muted: #6a7385;
+  --text-heading: #dce3ed;
+
+  --accent: #8b9cf6;
+  --accent-soft: #a5b4fc;
+  --accent-muted: rgba(139, 156, 246, 0.14);
+  --accent-border: rgba(139, 156, 246, 0.34);
+
+  --border-subtle: rgba(148, 163, 184, 0.1);
+  --border-medium: rgba(148, 163, 184, 0.18);
+
+  --nav-height: 4.75rem;
+  --scroll-margin-top: calc(var(--nav-height) + 0.75rem);
+  --nav-bg: rgba(15, 20, 31, 0.84);
+  --nav-bg-scrolled: rgba(15, 20, 31, 0.96);
+  --nav-border: var(--border-subtle);
+  --nav-text: var(--text-secondary);
+  --nav-text-hover: var(--text-heading);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body,
+#root {
+  min-height: 100%;
+  background-color: var(--bg-base);
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -30%, rgba(88, 101, 242, 0.11), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 100% 20%, rgba(129, 140, 248, 0.05), transparent 50%);
+  color: var(--text-primary);
+}
