@@ -9,8 +9,41 @@ import stylecove4 from '../assets/images/projects/project44.png';
 import stylecove5 from '../assets/images/projects/project45.png';
 import chat1 from '../assets/images/projects/project6.jpeg';
 import chat2 from '../assets/images/projects/project61.jpeg';
+import dwm1 from '../assets/images/projects/WhatsApp Image 2026-10-27 at 4.26.12 PM.jpeg';
+import dwm2 from '../assets/images/projects/WhatsApp Image 2026-10-27 at 4.26.18 PM.jpeg';
+import dwm3 from '../assets/images/projects/WhatsApp Image 2026-10-27 at 4.32.19 PM.jpeg';
+import dotms1 from '../assets/images/projects/dotms-1-signin.png';
+import dotms2 from '../assets/images/projects/dotms-3-sales.png';
+import dotms3 from '../assets/images/projects/dotms-4-stores.png';
+import docmind1 from '../assets/images/projects/WhatsApp Image 2026-10-27 at 4.07.33 PM.jpeg';
+import docmind2 from '../assets/images/projects/WhatsApp Image 2026-10-26 at 7.04.41 PM.jpeg';
+import docmind3 from '../assets/images/projects/WhatsApp Image 2026-10-26 at 7.04.29 PM.jpeg';
 
 const projects = [
+    {
+        title: 'DevMind',
+        category: 'NLP · LLM',
+        description: 'DevMind is an NLP document Q&A app built with React and Node.js. An LLM with RAG answers from uploaded PDFs, retrieves matching passages, cites sources, and saves chat history for follow-ups.',
+        image: [docmind1, docmind2, docmind3],
+        git: 'https://github.com/Hashir39/DevMind',
+        technologies: ['React', 'Node.js', 'LLM', 'NLP', 'RAG'],
+    },
+    {
+        title: 'Dark Web Monitor',
+        category: 'Full Stack · Security',
+        description: 'Dark Web Monitor is a signed-in monitoring app for email addresses and URLs, built with ASP.NET MVC and PostgreSQL. Every scan is stored and scored here with weighted rules. A high or rising score opens an alert, and a critical result also opens an investigation case.',
+        image: [dwm1, dwm2, dwm3],
+        git: 'https://github.com/Hashir39/FYP',
+        technologies: ['ASP.NET MVC', 'C#', 'PostgreSQL', 'Entity Framework'],
+    },
+    {
+        title: 'DOTMS',
+        category: 'Full Stack · Database',
+        description: 'DOTMS is a distributed point-of-sale system for grocery branches in Karachi and Lahore, built with React, Node.js, and PostgreSQL. A sale is written once in the central schema and copied to the city that owns the store, and head office reads both cities from a single sales report.',
+        image: [dotms1, dotms2, dotms3],
+        git: 'https://github.com/Hashir39/DOTPS',
+        technologies: ['React', 'Node.js', 'PostgreSQL', 'Express'],
+    },
     {
         title: 'AI Chatbot',
         category: 'AI · Full Stack',

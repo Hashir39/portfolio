@@ -87,8 +87,13 @@
 
 @media (max-width: 768px) {
   .hero-visual {
-    max-width: 22rem;
-    margin-bottom: 0.5rem;
+    max-width: min(100%, 26rem);
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-visual-svg {
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
   }
 
   .hero-visual-meta {

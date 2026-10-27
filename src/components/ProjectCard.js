@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 
 const ProjectCard = ({
   image,
@@ -11,11 +12,37 @@ const ProjectCard = ({
   featured = false,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [expanded, setExpanded] = useState(false);
+  const [truncated, setTruncated] = useState(false);
+  const [viewerOpen, setViewerOpen] = useState(false);
+  const descRef = useRef(null);
+  const zoomRef = useRef(null);
+  const closeRef = useRef(null);
   const slides = Array.isArray(image) ? image : [image];
   const hasCarousel = slides.length > 1;
 
   useEffect(() => {
-    if (!hasCarousel) {
+    const el = descRef.current;
+    if (!el || expanded) {
+      return undefined;
+    }
+
+    const measure = () => {
+      setTruncated(el.scrollHeight > el.clientHeight + 1);
+    };
+
+    measure();
+    if (typeof ResizeObserver !== 'function') {
+      return undefined;
+    }
+
+    const observer = new ResizeObserver(measure);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [description, expanded]);
+
+  useEffect(() => {
+    if (!hasCarousel || viewerOpen) {
       return undefined;
     }
 
@@ -24,7 +51,39 @@ const ProjectCard = ({
     }, 4500);
 
     return () => clearInterval(intervalId);
-  }, [hasCarousel, slides.length]);
+  }, [hasCarousel, slides.length, viewerOpen]);
+
+  useEffect(() => {
+    if (!viewerOpen) {
+      return undefined;
+    }
+
+    const onKey = (event) => {
+      if (event.key === 'Escape') {
+        setViewerOpen(false);
+      } else if (event.key === 'ArrowRight' && slides.length > 1) {
+        setCurrentIndex((prev) => (prev + 1) % slides.length);
+      } else if (event.key === 'ArrowLeft' && slides.length > 1) {
+        setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
+      }
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    const zoomButton = zoomRef.current;
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', onKey);
+    closeRef.current?.focus();
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', onKey);
+      zoomButton?.focus();
+    };
+  }, [viewerOpen, slides.length]);
+
+  const showSlide = (step) => {
+    setCurrentIndex((prev) => (prev + step + slides.length) % slides.length);
+  };
 
   return (
     <article className={`project-card${featured ? ' project-card-featured' : ''}`}>
@@ -35,11 +94,20 @@ const ProjectCard = ({
               key={src}
               className={`project-image${slideIndex === currentIndex ? ' is-active' : ''}`}
               src={src}
-              alt={`${title} screenshot ${slideIndex + 1}`}
+              alt=""
             />
           ))}
         </div>
         <div className="project-media-overlay" aria-hidden="true" />
+        <button
+          ref={zoomRef}
+          type="button"
+          className="project-zoom"
+          aria-label={`View ${title} screenshot full size`}
+          onClick={() => setViewerOpen(true)}
+        >
+          <span className="project-zoom-label">View full</span>
+        </button>
         <div className="project-media-badges">
           {featured && <span className="project-badge project-badge-featured">Featured</span>}
           {category && <span className="project-badge">{category}</span>}
@@ -71,7 +139,22 @@ const ProjectCard = ({
           {String(index).padStart(2, '0')}
         </div>
         <h3 className="project-title">{title}</h3>
-        <p className="project-desc">{description}</p>
+        <p
+          ref={descRef}
+          className={`project-desc${expanded ? ' is-expanded' : ''}`}
+        >
+          {description}
+        </p>
+        {truncated && (
+          <button
+            type="button"
+            className="project-desc-toggle"
+            aria-expanded={expanded}
+            onClick={() => setExpanded((open) => !open)}
+          >
+            {expanded ? 'Show less' : 'Read more'}
+          </button>
+        )}
         <ul className="project-tags">
           {technologies.filter((tag) => tag && tag.trim()).map((tag) => (
             <li key={tag} className="project-tag">
@@ -91,6 +174,60 @@ const ProjectCard = ({
           View on GitHub
         </a>
       </div>
+      {viewerOpen && createPortal(
+        <div
+          className="project-viewer"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${title} screenshot ${currentIndex + 1} of ${slides.length}`}
+        >
+          <button
+            type="button"
+            className="project-viewer-backdrop"
+            aria-label="Close full screenshot"
+            onClick={() => setViewerOpen(false)}
+          />
+          <figure className="project-viewer-stage">
+            <img
+              className="project-viewer-image"
+              src={slides[currentIndex]}
+              alt={`${title} screenshot ${currentIndex + 1}`}
+            />
+            <figcaption className="project-viewer-caption">
+              {title} · {currentIndex + 1}/{slides.length}
+            </figcaption>
+          </figure>
+          {hasCarousel && (
+            <button
+              type="button"
+              className="project-viewer-nav project-viewer-prev"
+              aria-label="Previous screenshot"
+              onClick={() => showSlide(-1)}
+            >
+              Prev
+            </button>
+          )}
+          {hasCarousel && (
+            <button
+              type="button"
+              className="project-viewer-nav project-viewer-next"
+              aria-label="Next screenshot"
+              onClick={() => showSlide(1)}
+            >
+              Next
+            </button>
+          )}
+          <button
+            ref={closeRef}
+            type="button"
+            className="project-viewer-close"
+            onClick={() => setViewerOpen(false)}
+          >
+            Close
+          </button>
+        </div>,
+        document.body,
+      )}
     </article>
   );
 };

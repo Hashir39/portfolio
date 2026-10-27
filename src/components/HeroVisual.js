@@ -2,11 +2,11 @@ import React from 'react';
 import '../styles/hero.css';
 
 const TECH_BADGES = [
-  { label: 'Next.js', x: 24, y: 128, w: 82, delay: 'hero-float-1' },
-  { label: 'React', x: 368, y: 118, w: 72, delay: 'hero-float-2' },
-  { label: 'Node.js', x: 20, y: 262, w: 88, delay: 'hero-float-3' },
-  { label: 'AWS', x: 372, y: 252, w: 72, delay: 'hero-float-4' },
-  { label: 'CI/CD', x: 196, y: 318, w: 72, delay: 'hero-float-5' },
+  { label: 'Next.js', x: 8, y: 62, w: 82, delay: 'hero-float-1' },
+  { label: 'React', x: 390, y: 62, w: 78, delay: 'hero-float-2' },
+  { label: 'Node.js', x: 6, y: 156, w: 86, delay: 'hero-float-3' },
+  { label: 'AWS', x: 396, y: 156, w: 72, delay: 'hero-float-4' },
+  { label: 'CI/CD', x: 204, y: 332, w: 72, delay: 'hero-float-5' },
 ];
 
 const HeroVisual = () => (
@@ -35,50 +35,50 @@ const HeroVisual = () => (
       </defs>
 
       <g filter="url(#hero-shadow)">
-        <rect x="72" y="88" width="336" height="232" rx="16" fill="url(#hero-screen)" stroke="rgba(139,156,246,0.35)" strokeWidth="2" />
-        <rect x="92" y="108" width="296" height="176" rx="8" fill="#0f141f" />
-        <rect x="72" y="320" width="336" height="14" rx="4" fill="#252d3e" />
-        <rect x="208" y="334" width="64" height="8" rx="2" fill="#323a4d" />
+        <rect x="104" y="52" width="272" height="236" rx="16" fill="url(#hero-screen)" stroke="rgba(139,156,246,0.35)" strokeWidth="2" />
+        <rect x="120" y="84" width="240" height="180" rx="8" fill="#0f141f" />
+        <rect x="104" y="288" width="272" height="12" rx="4" fill="#252d3e" />
+        <rect x="210" y="300" width="60" height="8" rx="2" fill="#323a4d" />
       </g>
 
-      <rect x="92" y="88" width="336" height="28" rx="16" fill="#171d2a" />
-      <circle cx="112" cy="102" r="5" fill="#f87171" />
-      <circle cx="128" cy="102" r="5" fill="#fbbf24" />
-      <circle cx="144" cy="102" r="5" fill="#34d399" />
-      <text x="108" y="138" fill="#6366f1" fontFamily="monospace" fontSize="10" opacity="0.9">
-        # .github/workflows/deploy.yml
+      <rect x="104" y="52" width="272" height="26" rx="16" fill="#171d2a" />
+      <circle cx="122" cy="65" r="4.5" fill="#f87171" />
+      <circle cx="136" cy="65" r="4.5" fill="#fbbf24" />
+      <circle cx="150" cy="65" r="4.5" fill="#34d399" />
+      <text x="132" y="106" fill="#6366f1" fontFamily="monospace" fontSize="10" opacity="0.9">
+        # deploy.yml
       </text>
-      <text x="108" y="154" fill="#a5b4fc" fontFamily="monospace" fontSize="10">
+      <text x="132" y="124" fill="#a5b4fc" fontFamily="monospace" fontSize="10">
         - run: npm run build
       </text>
-      <text x="108" y="170" fill="#a5b4fc" fontFamily="monospace" fontSize="10">
-        - run: aws amplify publish
+      <text x="132" y="142" fill="#a5b4fc" fontFamily="monospace" fontSize="10">
+        - run: amplify publish
       </text>
 
-      <rect x="108" y="182" width="276" height="1" fill="#2a3142" />
+      <rect x="132" y="154" width="216" height="1" fill="#2a3142" />
 
-      <text x="108" y="198" fill="#34d399" fontFamily="monospace" fontSize="10">
+      <text x="132" y="172" fill="#34d399" fontFamily="monospace" fontSize="10">
         GET /api/users
       </text>
-      <text x="108" y="214" fill="#8791a4" fontFamily="monospace" fontSize="10">
-        Express · REST · secure session
+      <text x="132" y="190" fill="#8791a4" fontFamily="monospace" fontSize="10">
+        Express · REST
       </text>
-      <text x="108" y="234" fill="#c9d2e0" fontFamily="monospace" fontSize="10" opacity="0.85">
-        {'// Muhammad Hashir — Full Stack + DevOps'}
+      <text x="132" y="210" fill="#c9d2e0" fontFamily="monospace" fontSize="10" opacity="0.85">
+        {'// Hashir · Full Stack'}
       </text>
-      <text x="108" y="252" fill="#8b9cf6" fontFamily="monospace" fontSize="10">
-        stack: Next.js | React | Node | Tailwind
+      <text x="132" y="228" fill="#8b9cf6" fontFamily="monospace" fontSize="10">
+        Next · React · Node
       </text>
 
       <g className="hero-pipeline">
-        <rect x="108" y="264" width="52" height="22" rx="6" fill="rgba(139,156,246,0.15)" stroke="rgba(139,156,246,0.35)" />
-        <text x="118" y="279" fill="#b4c0ff" fontFamily="monospace" fontSize="9">build</text>
-        <path d="M168 275h24" stroke="#4b5568" strokeWidth="2" strokeDasharray="4 3" />
-        <rect x="196" y="264" width="52" height="22" rx="6" fill="rgba(139,156,246,0.15)" stroke="rgba(139,156,246,0.35)" />
-        <text x="204" y="279" fill="#b4c0ff" fontFamily="monospace" fontSize="9">test</text>
-        <path d="M256 275h24" stroke="#4b5568" strokeWidth="2" strokeDasharray="4 3" />
-        <rect x="284" y="264" width="64" height="22" rx="6" fill="rgba(52,211,153,0.12)" stroke="rgba(52,211,153,0.4)" />
-        <text x="292" y="279" fill="#6ee7b7" fontFamily="monospace" fontSize="9">deploy</text>
+        <rect x="132" y="240" width="52" height="20" rx="6" fill="rgba(139,156,246,0.15)" stroke="rgba(139,156,246,0.35)" />
+        <text x="142" y="254" fill="#b4c0ff" fontFamily="monospace" fontSize="9">build</text>
+        <path d="M188 250h16" stroke="#4b5568" strokeWidth="2" strokeDasharray="4 3" />
+        <rect x="208" y="240" width="46" height="20" rx="6" fill="rgba(139,156,246,0.15)" stroke="rgba(139,156,246,0.35)" />
+        <text x="218" y="254" fill="#b4c0ff" fontFamily="monospace" fontSize="9">test</text>
+        <path d="M258 250h16" stroke="#4b5568" strokeWidth="2" strokeDasharray="4 3" />
+        <rect x="278" y="240" width="64" height="20" rx="6" fill="rgba(52,211,153,0.12)" stroke="rgba(52,211,153,0.4)" />
+        <text x="288" y="254" fill="#6ee7b7" fontFamily="monospace" fontSize="9">deploy</text>
       </g>
 
       {TECH_BADGES.map(({ label, x, y, w, delay }) => (

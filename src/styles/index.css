@@ -188,7 +188,7 @@ body {
   }
   .rightsection {
     width: 100% !important;
-    max-width: 22rem;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     order: 2;
