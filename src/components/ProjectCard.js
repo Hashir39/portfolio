@@ -12,34 +12,15 @@ const ProjectCard = ({
   featured = false,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [expanded, setExpanded] = useState(false);
-  const [truncated, setTruncated] = useState(false);
   const [viewerOpen, setViewerOpen] = useState(false);
-  const descRef = useRef(null);
+  const [canZoom, setCanZoom] = useState(
+    () => typeof window.matchMedia === 'function'
+      && window.matchMedia('(min-width: 720px)').matches,
+  );
   const zoomRef = useRef(null);
   const closeRef = useRef(null);
   const slides = Array.isArray(image) ? image : [image];
   const hasCarousel = slides.length > 1;
-
-  useEffect(() => {
-    const el = descRef.current;
-    if (!el || expanded) {
-      return undefined;
-    }
-
-    const measure = () => {
-      setTruncated(el.scrollHeight > el.clientHeight + 1);
-    };
-
-    measure();
-    if (typeof ResizeObserver !== 'function') {
-      return undefined;
-    }
-
-    const observer = new ResizeObserver(measure);
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [description, expanded]);
 
   useEffect(() => {
     if (!hasCarousel || viewerOpen) {
@@ -52,6 +33,24 @@ const ProjectCard = ({
 
     return () => clearInterval(intervalId);
   }, [hasCarousel, slides.length, viewerOpen]);
+
+  useEffect(() => {
+    if (typeof window.matchMedia !== 'function') {
+      return undefined;
+    }
+
+    const query = window.matchMedia('(min-width: 720px)');
+    const update = () => {
+      setCanZoom(query.matches);
+      if (!query.matches) {
+        setViewerOpen(false);
+      }
+    };
+
+    update();
+    query.addEventListener('change', update);
+    return () => query.removeEventListener('change', update);
+  }, []);
 
   useEffect(() => {
     if (!viewerOpen) {
@@ -94,20 +93,20 @@ const ProjectCard = ({
               key={src}
               className={`project-image${slideIndex === currentIndex ? ' is-active' : ''}`}
               src={src}
-              alt=""
+              alt={`${title} screenshot ${slideIndex + 1}`}
             />
           ))}
         </div>
         <div className="project-media-overlay" aria-hidden="true" />
-        <button
-          ref={zoomRef}
-          type="button"
-          className="project-zoom"
-          aria-label={`View ${title} screenshot full size`}
-          onClick={() => setViewerOpen(true)}
-        >
-          <span className="project-zoom-label">View full</span>
-        </button>
+        {canZoom && (
+          <button
+            ref={zoomRef}
+            type="button"
+            className="project-zoom"
+            aria-label={`View ${title} screenshot full size`}
+            onClick={() => setViewerOpen(true)}
+          />
+        )}
         <div className="project-media-badges">
           {featured && <span className="project-badge project-badge-featured">Featured</span>}
           {category && <span className="project-badge">{category}</span>}
@@ -139,22 +138,7 @@ const ProjectCard = ({
           {String(index).padStart(2, '0')}
         </div>
         <h3 className="project-title">{title}</h3>
-        <p
-          ref={descRef}
-          className={`project-desc${expanded ? ' is-expanded' : ''}`}
-        >
-          {description}
-        </p>
-        {truncated && (
-          <button
-            type="button"
-            className="project-desc-toggle"
-            aria-expanded={expanded}
-            onClick={() => setExpanded((open) => !open)}
-          >
-            {expanded ? 'Show less' : 'Read more'}
-          </button>
-        )}
+        <p className="project-desc">{description}</p>
         <ul className="project-tags">
           {technologies.filter((tag) => tag && tag.trim()).map((tag) => (
             <li key={tag} className="project-tag">
@@ -174,7 +158,7 @@ const ProjectCard = ({
           View on GitHub
         </a>
       </div>
-      {viewerOpen && createPortal(
+      {canZoom && viewerOpen && createPortal(
         <div
           className="project-viewer"
           role="dialog"

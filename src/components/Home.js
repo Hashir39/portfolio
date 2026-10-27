@@ -90,7 +90,7 @@ const Home = () => {
           </div>
         </section>
         </Element>
-        <div className="section-divider" aria-hidden="true" />
+        <div className="section-divider hero-divider" aria-hidden="true" />
 
         <Element name="about" className="about-scroll-target">
           <Experience />
