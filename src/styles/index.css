@@ -105,6 +105,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+.hero-name {
+  white-space: nowrap;
+}
 .purple {
   color: var(--accent-soft);
 }

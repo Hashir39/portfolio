@@ -26,6 +26,7 @@ const TypedComponent = () => {
     const typed = new Typed(typedRef.current, {
       strings: [
         'Full Stack Developer',
+        'MERN Stack Developer',
         'DevOps Engineer',
         'React Developer',
       ],
@@ -43,7 +44,11 @@ const TypedComponent = () => {
     };
   }, []);
 
-  return <span ref={typedRef} className="hero-typed-target" aria-live="polite" />;
+  return (
+    <span ref={typedRef} className="hero-typed-target" aria-live="polite">
+      Full Stack Developer
+    </span>
+  );
 };
 
 
@@ -64,14 +69,14 @@ const Home = () => {
         <section className="firstsection" aria-labelledby="hero-heading">
           <div className="leftsection">
             <h1 id="hero-heading" className="hero-heading">
-              Hi, My Name is <span className="purple">Hashir</span>
+              Hi, My Name is <span className="hero-name purple">Muhammad Hashir</span>
             </h1>
             <p className="hero-role-line">
               <span className="hero-role-prefix">and I&apos;m a</span>{' '}
               <TypedComponent />
             </p>
             <p className="hero-tagline">
-              Building scalable web apps, REST APIs, and CI/CD pipelines · Karachi, Pakistan
+              MERN stack developer in Karachi, building web apps, REST APIs, and CI/CD pipelines.
             </p>
             <div className="buttons">
               <button className="btn" type="button" onClick={handleDownloadResume} >Download Resume</button>
